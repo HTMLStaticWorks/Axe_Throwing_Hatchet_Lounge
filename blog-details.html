@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Details | Ironwood Hatchet Lounge</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .blog-content p { margin-bottom: 1.5rem; }
+        .tip-box {
+            padding: 1.5rem;
+            border-left: 4px solid var(--highlight-color);
+            margin: 2rem 0;
+            background: rgba(234, 88, 12, 0.05);
+        }
+        .tip-box.safety { border-color: var(--secondary-color); background: rgba(22, 101, 52, 0.05); }
+        .tip-box.amber { border-color: var(--amber-color); background: rgba(217, 119, 6, 0.05); }
+        
+        .sticky-toc {
+            top: 100px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top scrolled">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <i data-lucide="axe" class="me-2 text-highlight"></i>
+                <span class="h3 mb-0 text-white display-font">IRONWOOD <span class="text-highlight">HATCHET</span></span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i data-lucide="menu" class="text-white"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link text-highlight" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Header -->
+    <header class="section-padding bg-dark wood-grain text-center mt-5">
+        <div class="hero-overlay opacity-75"></div>
+        <div class="container position-relative z-3">
+            <nav aria-label="breadcrumb" class="mb-4 d-flex justify-content-center">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="blog.html" class="text-highlight text-decoration-none">Blog</a></li>
+                    <li class="breadcrumb-item active text-white" aria-current="page">Throwing Tips</li>
+                </ol>
+            </nav>
+            <h1 class="display-3 text-white mb-3" data-aos="fade-up">The 3 Most Common <br><span class="text-highlight">Axe Throwing Mistakes</span></h1>
+            <div class="d-flex justify-content-center align-items-center text-accent small" data-aos="fade-up" data-aos-delay="100">
+                <span class="me-3"><i data-lucide="user" class="me-1" style="width: 14px;"></i> By Rafe Calloway</span>
+                <span><i data-lucide="calendar" class="me-1" style="width: 14px;"></i> May 10, 2026</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Article Content -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Main Content -->
+                <div class="col-lg-8">
+                    <img src="https://images.unsplash.com/photo-1599058917233-5574bc362031?auto=format&fit=crop&q=80&w=1200" alt="Article Image" class="img-fluid mb-5" data-aos="fade-up">
+                    
+                    <div class="blog-content" data-aos="fade-up">
+                        <p class="lead">Axe throwing looks simple, right? You pick up a sharp object, chuck it at a target, and hope for the best. But if you want to actually hit the bullseye (and do it consistently), there's a lot of technique involved.</p>
+                        
+                        <h3 id="mistake-1" class="display-font mt-5">1. The "Death Grip"</h3>
+                        <p>One of the most common mistakes beginners make is gripping the axe too tightly. They think more power equals a better stick, but it's actually the opposite. A tight grip prevents the axe from releasing smoothly, leading to under-rotation.</p>
+                        
+                        <div class="tip-box">
+                            <h6 class="text-highlight text-uppercase fw-bold"><i data-lucide="lightbulb" class="me-2" style="width: 18px;"></i> Pro Tip: The Handshake</h6>
+                            <p class="small mb-0">Grip the axe like you're giving a firm handshake. Your fingers should be wrapped around the handle, but you shouldn't be squeezing the life out of it. Let the momentum do the work.</p>
+                        </div>
+
+                        <h3 id="mistake-2" class="display-font mt-5">2. Stepping Too Early</h3>
+                        <p>Your power comes from your legs, but timing is everything. Many throwers step forward before their arm has reached the peak of the throw. This disconnects your upper and lower body power, resulting in a weak throw that bounces off the target.</p>
+                        
+                        <div class="tip-box amber">
+                            <h6 class="text-amber text-uppercase fw-bold"><i data-lucide="info" class="me-2" style="width: 18px;"></i> Beginner Note</h6>
+                            <p class="small mb-0">If you're just starting, try throwing from a stationary stance first. Once you've mastered the arm motion, then incorporate the step to add power and distance.</p>
+                        </div>
+
+                        <h3 id="mistake-3" class="display-font mt-5">3. Flicking the Wrist</h3>
+                        <p>This is the hardest habit to break. Most people want to flick their wrist at the end of the throw to get more spin. In axe throwing, the spin should come from the natural release of the handle, not a flick. Flicking creates unpredictable rotation and usually ends with a flat landing.</p>
+
+                        <div class="tip-box safety">
+                            <h6 class="text-secondary text-uppercase fw-bold"><i data-lucide="shield" class="me-2" style="width: 18px;"></i> Safety Tip</h6>
+                            <p class="small mb-0">Never try to catch an axe that bounces back. Even if you think you can grab the handle, the risk isn't worth it. Step back and let it fall.</p>
+                        </div>
+
+                        <p class="mt-5">Mastering these three fundamentals will take you from a casual thrower to a league-ready competitor in no time. Ready to put these tips to the test? Book a lane this weekend and show us what you've got!</p>
+                    </div>
+
+                    <!-- Author Bio -->
+                    <div class="card bg-dark border-secondary p-4 mt-5" data-aos="fade-up">
+                        <div class="row align-items-center">
+                            <div class="col-md-2 text-center mb-3 mb-md-0">
+                                <img src="https://i.pravatar.cc/300?u=1" alt="Rafe" class="rounded-circle img-fluid" style="width: 80px;">
+                            </div>
+                            <div class="col-md-10">
+                                <h5 class="text-white mb-1">Rafe Calloway</h5>
+                                <p class="small text-highlight text-uppercase mb-2">Head Coach & WATL Certified</p>
+                                <p class="small text-muted mb-0">Rafe has been throwing professionally for 5 years and has hosted over 1,000 sessions at Ironwood. When he's not coaching, he's competing in regional tournaments.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Share -->
+                    <div class="mt-5 d-flex align-items-center gap-3" data-aos="fade-up">
+                        <span class="small text-accent">Share this article:</span>
+                        <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle p-2"><i data-lucide="facebook" style="width: 16px;"></i></a>
+                        <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle p-2"><i data-lucide="twitter" style="width: 16px;"></i></a>
+                        <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle p-2"><i data-lucide="linkedin" style="width: 16px;"></i></a>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="col-lg-4">
+                    <div class="sticky-top" style="top: 100px;">
+                        <!-- TOC -->
+                        <div class="sticky-toc mb-4" data-aos="fade-left">
+                            <h5 class="text-white mb-4">Table of Contents</h5>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2"><a href="#mistake-1" class="text-accent text-decoration-none small hover-highlight">1. The Death Grip</a></li>
+                                <li class="mb-2"><a href="#mistake-2" class="text-accent text-decoration-none small hover-highlight">2. Stepping Too Early</a></li>
+                                <li class="mb-2"><a href="#mistake-3" class="text-accent text-decoration-none small hover-highlight">3. Flicking the Wrist</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Related Posts -->
+                        <div class="card bg-dark border-secondary p-4 mb-4" data-aos="fade-left" data-aos-delay="100">
+                            <h5 class="text-white mb-3">Related Posts</h5>
+                            <a href="#" class="d-flex align-items-center text-decoration-none mb-3">
+                                <img src="https://images.unsplash.com/photo-1595152230381-f2f283287383?auto=format&fit=crop&q=80&w=100" alt="Related" class="me-3" style="width: 60px; height: 60px; object-fit: cover;">
+                                <div>
+                                    <h6 class="text-white small mb-1">WATL Scoring Explained</h6>
+                                    <p class="text-muted smaller mb-0">May 05, 2026</p>
+                                </div>
+                            </a>
+                            <a href="#" class="d-flex align-items-center text-decoration-none">
+                                <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=100" alt="Related" class="me-3" style="width: 60px; height: 60px; object-fit: cover;">
+                                <div>
+                                    <h6 class="text-white small mb-1">Ultimate Corporate Event</h6>
+                                    <p class="text-muted smaller mb-0">April 28, 2026</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- CTA Box -->
+                        <div class="card bg-dark border-highlight border-2 p-4 text-center" data-aos="fade-left" data-aos-delay="200">
+                            <h4 class="text-white mb-3">Ready to throw?</h4>
+                            <p class="small text-muted mb-4">Lanes are filling up fast for the weekend. Reserve yours now.</p>
+                            <a href="contact.html" class="btn btn-primary w-100">Book a Lane →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p class="small mb-0">&copy; 2026 Ironwood Hatchet Lounge. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

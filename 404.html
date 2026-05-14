@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Throw Missed | Ironwood Hatchet Lounge</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .error-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            background: var(--bg-body);
+        }
+        .axe-missing-svg {
+            max-width: 400px;
+            margin-bottom: 3rem;
+        }
+        @keyframes axe-fly-past {
+            0% { transform: translate(-200px, 0) rotate(0deg); opacity: 0; }
+            50% { opacity: 1; }
+            100% { transform: translate(600px, 100px) rotate(720deg); opacity: 0; }
+        }
+        .axe-animation {
+            animation: axe-fly-past 3s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="error-container wood-grain">
+        <div class="hero-overlay opacity-90"></div>
+        <div class="position-relative z-3">
+            <!-- Themed Illustration -->
+            <div class="axe-missing-svg mx-auto" data-aos="zoom-in">
+                <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Target -->
+                    <circle cx="200" cy="150" r="100" stroke="#94A3B8" stroke-width="2" />
+                    <circle cx="200" cy="150" r="70" stroke="#94A3B8" stroke-width="2" />
+                    <circle cx="200" cy="150" r="40" stroke="#EA580C" stroke-width="4" />
+                    <circle cx="200" cy="150" r="10" fill="#EA580C" />
+                    <!-- Flying Axe -->
+                    <g class="axe-animation">
+                        <rect x="20" y="20" width="10" height="40" fill="#78350F" />
+                        <path d="M30 20L50 10V30L30 40V20Z" fill="#94A3B8" />
+                    </g>
+                </svg>
+            </div>
+
+            <h1 class="display-1 text-white mb-2" data-aos="fade-up">WHOA — <span class="text-highlight">THAT THROW MISSED.</span></h1>
+            <p class="h4 text-accent mb-5 text-uppercase letter-spacing-1" data-aos="fade-up" data-aos-delay="100">404 Page Not Found</p>
+            <p class="text-light opacity-75 mb-5 mx-auto" style="max-width: 500px;" data-aos="fade-up" data-aos-delay="200">
+                Even our best throwers miss sometimes. Don't worry, we'll get you back on target in no time.
+            </p>
+
+            <div class="d-flex flex-wrap justify-content-center gap-3 mb-5" data-aos="fade-up" data-aos-delay="300">
+                <a href="index.html" class="btn btn-primary px-4">Back to Home</a>
+                <a href="contact.html" class="btn btn-outline-light px-4">Book a Lane</a>
+                <a href="services.html" class="btn btn-outline-light px-4">View Packages</a>
+            </div>
+
+            <div class="input-group mx-auto" style="max-width: 400px;" data-aos="fade-up" data-aos-delay="400">
+                <input type="text" class="form-control bg-dark border-secondary text-white" placeholder="Search for something else...">
+                <button class="btn btn-primary"><i data-lucide="search" style="width: 18px;"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
