@@ -394,32 +394,20 @@ footer {
     border-color: var(--highlight-color) !important;
 }
 
-/* Calendar picker icon — white on dark backgrounds */
-/* Use color-scheme:dark so browser natively renders a white icon */
-.date-picker-dark,
-.bg-dark input[type="date"],
+/* Hide date picker icon */
+.date-picker::-webkit-calendar-picker-indicator {
+    display: none !important;
+    -webkit-appearance: none;
+}
+
+/* Ensure dark theme for date picker inputs in dark mode */
 [data-bs-theme="dark"] input[type="date"] {
     color-scheme: dark;
 }
 
-/* Fallback: invert for webkit browsers */
-.date-picker-dark::-webkit-calendar-picker-indicator,
-.bg-dark input[type="date"]::-webkit-calendar-picker-indicator,
-[data-bs-theme="dark"] input[type="date"]::-webkit-calendar-picker-indicator {
-    filter: invert(1);
-    opacity: 1;
-    cursor: pointer;
-}
-
-/* Light mode on dark inquiry section — keep white icon */
+/* Ensure dark theme for date picker inputs in specific sections */
 [data-bs-theme="light"] .inquiry-highlight input[type="date"] {
     color-scheme: dark;
-}
-
-[data-bs-theme="light"] .inquiry-highlight input[type="date"]::-webkit-calendar-picker-indicator {
-    filter: invert(1);
-    opacity: 1;
-    cursor: pointer;
 }
 
 [data-bs-theme="light"] footer h5 {
@@ -668,7 +656,7 @@ footer h5 {
 
     [data-bs-theme="light"] .navbar-collapse .nav-item.dropdown .dropdown-item {
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-        color: var(--text-dark) !important;
+
     }
 
     /* Home 1 and Home 2 items with hover/active state like other menu */
@@ -736,7 +724,7 @@ footer .form-control {
 /* Fix 5: About page image height at 1024px */
 @media (max-width: 1024px) {
     .section-padding img.rounded.shadow-lg {
-        height: 100%;
+        height: auto;
         object-fit: cover;
     }
 }
