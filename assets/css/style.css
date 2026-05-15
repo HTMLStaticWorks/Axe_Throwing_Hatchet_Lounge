@@ -2,18 +2,24 @@
 
 :root {
     /* Color Palette */
-    --primary-color: #1A1A1A; /* Deep Charcoal */
-    --accent-color: #94A3B8;  /* Axe Silver */
-    --highlight-color: #EA580C; /* Burnt Orange */
-    --secondary-color: #166534; /* Forest Green */
-    --amber-color: #D97706;    /* Warm Amber */
-    --bg-light: #FAFAF7;       /* Off-white */
+    --primary-color: #1A1A1A;
+    /* Deep Charcoal */
+    --accent-color: #94A3B8;
+    /* Axe Silver */
+    --highlight-color: #EA580C;
+    /* Burnt Orange */
+    --secondary-color: #166534;
+    /* Forest Green */
+    --amber-color: #D97706;
+    /* Warm Amber */
+    --bg-light: #FAFAF7;
+    /* Off-white */
     --text-dark: #1A1A1A;
     --text-light: #F8FAFC;
-    
+
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    
+
     /* Spacing */
     --section-padding: 100px 0;
 }
@@ -42,7 +48,13 @@ body {
     transition: var(--transition-smooth);
 }
 
-h1, h2, h3, h4, h5, h6, .display-font {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.display-font {
     font-family: 'Bebas Neue', sans-serif;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -50,17 +62,27 @@ h1, h2, h3, h4, h5, h6, .display-font {
 
 /* Wood Grain Utility */
 .wood-grain {
-    background-image: linear-gradient(rgba(26, 26, 26, 0.9), rgba(26, 26, 26, 0.9)), 
-                      url('https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&q=80&w=2070');
+    background-image: linear-gradient(rgba(26, 26, 26, 0.9), rgba(26, 26, 26, 0.9)),
+        url('https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&q=80&w=2070');
     background-size: cover;
     background-position: center;
 }
 
 /* Ember Animation */
 @keyframes ember-float {
-    0% { transform: translateY(0) rotate(0deg); opacity: 0; }
-    50% { opacity: 0.8; }
-    100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+    }
 }
 
 .ember-container {
@@ -121,11 +143,40 @@ h1, h2, h3, h4, h5, h6, .display-font {
     color: var(--primary-color);
 }
 
+/* Outlined orange button — used in Fuel Your Fire / View Menu */
+.btn-outline-highlight {
+    color: var(--highlight-color);
+    border: 2px solid var(--highlight-color);
+    background: transparent;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.1rem;
+    padding: 0.75rem 2rem;
+    letter-spacing: 1px;
+    transition: var(--transition-smooth);
+    display: inline-block;
+    text-decoration: none;
+}
+
+.btn-outline-highlight:hover {
+    background-color: var(--highlight-color);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(234, 88, 12, 0.3);
+}
+
 /* Axe Spin Animation for Coming Soon */
 @keyframes axe-spin {
-    0% { transform: rotate(0deg) scale(1); }
-    50% { transform: rotate(180deg) scale(1.1); }
-    100% { transform: rotate(360deg) scale(1); }
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(180deg) scale(1.1);
+    }
+
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
 }
 
 .axe-spin {
@@ -142,30 +193,82 @@ h1, h2, h3, h4, h5, h6, .display-font {
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
 }
 
-/* Navbar Customization */
-.navbar {
-    padding: 1.5rem 0;
-    transition: var(--transition-smooth);
-    background: transparent;
+.text-highlight {
+    color: var(--highlight-color) !important;
+    stroke: var(--highlight-color);
 }
 
-.navbar.scrolled {
-    background: rgba(26, 26, 26, 0.95);
-    padding: 0.75rem 0;
-    backdrop-filter: blur(10px);
+/* Navbar Customization */
+.navbar {
+    padding: 1.25rem 0;
+    transition: var(--transition-smooth);
+    background: var(--primary-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+[data-bs-theme="light"] .navbar {
+    background: #FFFFFF;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-brand span:first-of-type {
+    color: white;
+}
+
+[data-bs-theme="light"] .navbar-brand span:first-of-type {
+    color: #000000 !important;
+}
+
+.navbar .btn-link,
+.navbar .nav-link {
+    color: var(--text-light) !important;
+}
+
+[data-bs-theme="light"] .navbar .btn-link,
+[data-bs-theme="light"] .navbar .nav-link {
+    color: var(--text-dark) !important;
+}
+
+.navbar .navbar-toggler i {
+    color: white;
+}
+
+[data-bs-theme="light"] .navbar .navbar-toggler i {
+    color: black;
 }
 
 .nav-link {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1.2rem;
     letter-spacing: 1px;
-    color: var(--text-light) !important;
     margin: 0 0.5rem;
     transition: var(--transition-smooth);
 }
 
 .nav-link:hover {
     color: var(--highlight-color) !important;
+}
+
+/* Active Nav State */
+.nav-link.active,
+.nav-link.active:focus {
+    color: var(--highlight-color) !important;
+    font-weight: 700;
+}
+
+.navbar .dropdown-toggle.active {
+    color: var(--highlight-color) !important;
+}
+
+.dropdown-item.active-page {
+    color: var(--highlight-color) !important;
+    font-weight: 600;
+}
+
+.nav-item.dropdown a {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
 }
 
 /* Hero Section */
@@ -200,7 +303,31 @@ h1, h2, h3, h4, h5, h6, .display-font {
     border-radius: 0;
     overflow: hidden;
     height: 100%;
+    display: flex;
+    flex-direction: column;
     transition: var(--transition-smooth);
+}
+
+.service-card>img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.service-card .p-4 {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.service-card .p-4>a.btn,
+.service-card .p-4>a.text-highlight {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+.service-card .p-4>a.btn.w-100 {
+    align-self: stretch;
 }
 
 .service-card:hover {
@@ -212,11 +339,118 @@ h1, h2, h3, h4, h5, h6, .display-font {
     text-align: right;
 }
 
-/* Footer */
+/* Footer — dark in dark mode, light in light mode */
 footer {
     background: #0F172A;
     color: var(--accent-color);
     padding: 80px 0 30px;
+}
+
+[data-bs-theme="light"] footer {
+    background: #ccc;
+    color: #333;
+}
+
+[data-bs-theme="light"] .membership-highlight,
+[data-bs-theme="light"] .corporate-highlight,
+[data-bs-theme="light"] .how-it-works-highlight,
+[data-bs-theme="light"] .the-vibe-highlight,
+[data-bs-theme="light"] .venue-highlight,
+[data-bs-theme="light"] .inquiry-highlight {
+    background-color: #000 !important;
+}
+
+[data-bs-theme="light"] .membership-highlight h2,
+[data-bs-theme="light"] .membership-highlight p,
+[data-bs-theme="light"] .membership-highlight i,
+[data-bs-theme="light"] .corporate-highlight h2,
+[data-bs-theme="light"] .corporate-highlight p,
+[data-bs-theme="light"] .how-it-works-highlight h2,
+[data-bs-theme="light"] .how-it-works-highlight h4,
+[data-bs-theme="light"] .how-it-works-highlight p,
+[data-bs-theme="light"] .the-vibe-highlight h2,
+[data-bs-theme="light"] .the-vibe-highlight h6,
+[data-bs-theme="light"] .the-vibe-highlight p,
+[data-bs-theme="light"] .venue-highlight h2,
+[data-bs-theme="light"] .venue-highlight p,
+[data-bs-theme="light"] .venue-highlight h3,
+[data-bs-theme="light"] .venue-highlight span,
+[data-bs-theme="light"] .inquiry-highlight h2,
+[data-bs-theme="light"] .inquiry-highlight p,
+[data-bs-theme="light"] .inquiry-highlight label,
+[data-bs-theme="light"] .inquiry-highlight .form-text,
+[data-bs-theme="light"] .inquiry-highlight li {
+    color: #fff !important;
+}
+
+[data-bs-theme="light"] .occasion-btn {
+    color: #333 !important;
+    border-color: #ddd !important;
+}
+
+[data-bs-theme="light"] .occasion-btn.active {
+    color: #fff !important;
+    background-color: var(--highlight-color) !important;
+    border-color: var(--highlight-color) !important;
+}
+
+/* Calendar picker icon — white on dark backgrounds */
+/* Use color-scheme:dark so browser natively renders a white icon */
+.date-picker-dark,
+.bg-dark input[type="date"],
+[data-bs-theme="dark"] input[type="date"] {
+    color-scheme: dark;
+}
+
+/* Fallback: invert for webkit browsers */
+.date-picker-dark::-webkit-calendar-picker-indicator,
+.bg-dark input[type="date"]::-webkit-calendar-picker-indicator,
+[data-bs-theme="dark"] input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    opacity: 1;
+    cursor: pointer;
+}
+
+/* Light mode on dark inquiry section — keep white icon */
+[data-bs-theme="light"] .inquiry-highlight input[type="date"] {
+    color-scheme: dark;
+}
+
+[data-bs-theme="light"] .inquiry-highlight input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    opacity: 1;
+    cursor: pointer;
+}
+
+[data-bs-theme="light"] footer h5 {
+    color: #000;
+}
+
+[data-bs-theme="light"] .footer-link {
+    color: #000000;
+}
+
+[data-bs-theme="light"] .footer-link:hover {
+    color: var(--highlight-color);
+}
+
+[data-bs-theme="light"] footer .btn-outline-secondary {
+    color: #333;
+    border-color: #ccc;
+}
+
+[data-bs-theme="light"] footer .btn-outline-secondary:hover {
+    background: var(--highlight-color);
+    border-color: var(--highlight-color);
+    color: #fff;
+}
+
+[data-bs-theme="light"] footer .small.opacity-75 {
+    color: #000000 !important;
+}
+
+[data-bs-theme="light"] footer p {
+    color: #000000 !important;
 }
 
 footer h5 {
@@ -242,12 +476,410 @@ footer h5 {
     padding-right: 5px;
 }
 
+@media (min-width: 576px) {
+    .footer-btn {
+        max-width: 150px;
+    }
+}
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     :root {
         --section-padding: 60px 0;
     }
+
     .display-1 {
         font-size: 3.5rem;
+    }
+}
+
+/* Scroll Top Button Customization */
+#scroll-top {
+    transition: var(--transition-smooth);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#scroll-top:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(234, 88, 12, 0.4);
+}
+
+/* Dropdown — Bootstrap handles open/close; no hover override needed */
+/* Home dropdown toggle is always orange (highlight color) */
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+    color: var(--highlight-color) !important;
+}
+
+
+
+[data-bs-theme="light"] .navbar .nav-link {
+    color: #333 !important;
+}
+
+[data-bs-theme="light"] .navbar .nav-link.active,
+[data-bs-theme="light"] .navbar .nav-link:hover {
+    color: var(--highlight-color) !important;
+}
+
+/* ===== Page Hero (orange hero used across inner pages) ===== */
+.page-hero {
+    background: var(--highlight-color);
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-hero::before {
+    content: '';
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 50%;
+}
+
+.page-hero::after {
+    content: '';
+    position: absolute;
+    bottom: -80px;
+    left: -40px;
+    width: 240px;
+    height: 240px;
+    background: rgba(0, 0, 0, 0.08);
+    border-radius: 50%;
+}
+
+.page-hero-strip {
+    background: #C2410C;
+    padding: 32px 0;
+}
+
+.page-hero-strip .s-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.2rem;
+    color: #fff;
+    line-height: 1;
+}
+
+.page-hero-strip .s-lbl {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/* Auth Page Layout & Elements */
+.theme-controls-fixed {
+    position: fixed !important;
+    top: 1.5rem;
+    right: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    z-index: 1100;
+}
+
+[data-bs-theme="light"] .theme-controls-fixed .btn {
+    color: #333 !important;
+}
+
+@media (max-width: 576px) {
+    .theme-controls-fixed {
+        top: 0.75rem;
+        right: 0.75rem;
+        background: rgba(0, 0, 0, 0.2);
+        padding: 0.4rem;
+        border-radius: 50px;
+        backdrop-filter: blur(8px);
+    }
+
+    [data-bs-theme="light"] .theme-controls-fixed {
+        background: rgba(255, 255, 255, 0.8);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.input-group-auth .btn {
+    border-color: var(--border-color);
+    background: transparent;
+    color: var(--text-muted);
+}
+
+.input-group-auth .form-control {
+    border-right: none;
+}
+
+[data-bs-theme="light"] .input-group-auth .btn {
+    border-color: #dee2e6 !important;
+    color: #666 !important;
+}
+
+[data-bs-theme="light"] .auth-card .form-control {
+    background-color: #fff !important;
+    color: #000 !important;
+    border-color: #dee2e6 !important;
+}
+
+/* Fix 2: Prevent hamburger expansion from pushing hero content */
+.navbar-collapse {
+    transition: var(--transition-smooth);
+}
+
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--primary-color);
+        padding: 1.5rem;
+        z-index: 1000;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    [data-bs-theme="light"] .navbar-collapse {
+        background: #FFFFFF;
+    }
+
+    /* Hide dropdown toggle and menu on mobile */
+    .navbar-collapse .nav-item.dropdown>.dropdown-toggle {
+        display: none;
+    }
+
+    .navbar-collapse .nav-item.dropdown>.dropdown-menu {
+        display: block;
+        position: static;
+        background: transparent;
+        border: none;
+        padding: 0;
+        box-shadow: none;
+        margin: 0;
+    }
+
+    .navbar-collapse .nav-item.dropdown .dropdown-item {
+        padding: 0.75rem 0;
+        background: transparent;
+        display: block;
+        transition: var(--transition-smooth);
+        margin-left: .5rem;
+    }
+
+    [data-bs-theme="light"] .navbar-collapse .nav-item.dropdown .dropdown-item {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        color: var(--text-dark) !important;
+    }
+
+    /* Home 1 and Home 2 items with hover/active state like other menu */
+    .navbar-collapse .nav-item.dropdown .dropdown-item:hover,
+    .navbar-collapse .nav-item.dropdown .dropdown-item.active {
+        color: var(--highlight-color) !important;
+        font-weight: 600;
+        background-color: transparent !important;
+    }
+
+    .navbar-collapse .nav-item.dropdown .dropdown-item:focus {
+        background-color: transparent !important;
+    }
+}
+
+/* Fix 9: Newsletter input background white */
+footer .form-control {
+    background-color: #FFFFFF !important;
+    color: #1A1A1A !important;
+}
+
+/* Fix 11: Navbar dropdown hover/click styling */
+.dropdown-item:hover,
+.dropdown-item:focus,
+.dropdown-item.active,
+.dropdown-item:active {
+    background-color: transparent !important;
+    color: var(--highlight-color) !important;
+}
+
+
+
+/* Fix 7: Featured Venue Highlight — "The VIP Lounge" title black in light mode */
+[data-bs-theme="light"] .venue-highlight-content {
+    background-color: #FFFFFF !important;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+[data-bs-theme="light"] .venue-highlight-content h3,
+[data-bs-theme="light"] .venue-highlight-content p,
+[data-bs-theme="light"] .venue-highlight-content li {
+    color: #1A1A1A !important;
+}
+
+/* VIP Lounge title: white in dark mode, black in light mode */
+[data-bs-theme="dark"] .vip-lounge-title {
+    color: #ffffff !important;
+}
+
+[data-bs-theme="light"] .vip-lounge-title {
+    color: #000000 !important;
+}
+
+/* Fix 10: Dropdown icon visibility for Custom Quote (Home2) */
+.form-select {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23EA580C' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e") !important;
+}
+
+[data-bs-theme="light"] .form-select {
+    background-color: #FFFFFF !important;
+    color: #1A1A1A !important;
+}
+
+/* Fix 5: About page image height at 1024px */
+@media (max-width: 1024px) {
+    .section-padding img.rounded.shadow-lg {
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+/* Fix 8: Home2 Choose Your Occasion img full width in tab view */
+@media (max-width: 991px) {
+    .occasion-card-img {
+        width: 100% !important;
+        height: auto !important;
+        display: block;
+    }
+
+    .occasion-selector img {
+        width: 100% !important;
+        height: auto !important;
+        margin-top: 2rem;
+    }
+}
+
+/* Static occasion buttons — visual only, no filter action */
+.occasion-btn-static {
+    pointer-events: none;
+    opacity: 0.65;
+}
+
+/* Fix 4: Service page mobile responsiveness */
+@media (max-width: 576px) {
+    .service-comparison-table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .display-1 {
+        font-size: 3rem !important;
+    }
+
+    .section-padding {
+        padding: 60px 0 !important;
+    }
+}
+
+/* Ensure navbar expansion doesn't push content on all pages */
+body.navbar-expanded {
+    overflow: hidden;
+}
+
+/* Fix 6: Occasion buttons pointer/cursor */
+.occasion-btn {
+    cursor: pointer;
+}
+
+/* ===== Social Icon Links with FontAwesome Hover ===== */
+.social-icon-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: var(--transition-smooth);
+    font-size: 18px;
+}
+
+.social-icon-link:hover {
+    background-color: var(--highlight-color);
+    border-color: var(--highlight-color);
+    color: #FFFFFF;
+    transform: translateY(-3px);
+}
+
+[data-bs-theme="light"] .social-icon-link {
+    border-color: #333;
+    color: #333;
+}
+
+[data-bs-theme="light"] .social-icon-link:hover {
+    background-color: var(--highlight-color);
+    border-color: var(--highlight-color);
+    color: #FFFFFF;
+}
+
+/* ===== Footer Newsletter Input Dark Mode ===== */
+[data-bs-theme="dark"] footer .form-control {
+    background-color: #000000 !important;
+    color: #FFFFFF !important;
+    border-color: #333333 !important;
+}
+
+[data-bs-theme="dark"] footer .form-control::placeholder {
+    color: #999999 !important;
+}
+
+[data-bs-theme="dark"] footer .form-control:focus {
+    background-color: #1A1A1A !important;
+    border-color: var(--highlight-color) !important;
+    color: #FFFFFF !important;
+}
+
+/* Light mode newsletter input */
+[data-bs-theme="light"] footer .form-control {
+    background-color: #FFFFFF !important;
+    color: #1A1A1A !important;
+    border-color: #ddd !important;
+}
+
+/* ===== Footer P Text Black in Light Mode ===== */
+[data-bs-theme="light"] footer p {
+    color: #000000 !important;
+}
+
+/* ===== Footer Responsive: 2-col tablet, 1-col mobile ===== */
+@media (min-width: 577px) and (max-width: 991px) {
+    footer .row>div {
+        margin-bottom: 2rem;
+    }
+
+    /* Brand block — full width */
+    footer .col-lg-4:first-child {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    /* Quick Links & Resources — 2 per row */
+    footer .col-6.col-lg-2 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    /* Newsletter — full width */
+    footer .col-lg-4:last-child {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/* Mobile: 1 column per row */
+@media (max-width: 576px) {
+    footer .row>div {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        margin-bottom: 2rem;
     }
 }
