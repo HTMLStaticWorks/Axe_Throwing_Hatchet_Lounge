@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Events | AxeHaus</title>
+    <meta name="description"
+        content="Plan your next birthday, bachelor party, or corporate event at AxeHaus. The ultimate group experience in Austin.">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .occasion-btn {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            color: var(--accent-color);
+            border: 1px solid var(--border-color);
+            background: transparent;
+            padding: 1rem 1.5rem;
+            transition: var(--transition-smooth);
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+        }
+
+        .occasion-btn.active {
+            background: var(--highlight-color);
+            border-color: var(--highlight-color);
+            color: white;
+        }
+
+        .occasion-card {
+            transition: opacity 0.3s ease;
+        }
+
+        .stat-card {
+            background: rgba(234, 88, 12, 0.05);
+            border: 1px solid rgba(234, 88, 12, 0.1);
+            padding: 2rem;
+            height: 100%;
+            text-align: center;
+            transition: var(--transition-smooth);
+        }
+
+        .stat-card:hover {
+            border-color: var(--highlight-color);
+            transform: translateY(-5px);
+        }
+    </style>
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-axe'><path d='m14 12-8.5 8.5a2.12 2.12 0 1 1-3-3L11 9'/><path d='M15 13 9 7l4-4 6 6h3a8 8 0 0 1-7 7z'/></svg>">
+</head>
+
+<body>
+
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <i data-lucide="axe" class="me-2 text-highlight"></i>
+                <span class="h3 mb-0 display-font">AxeHaus</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i data-lucide="menu"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button"
+                            data-bs-toggle="dropdown">Home</a>
+                        <ul class="dropdown-menu  border-secondary">
+                            <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+                            <li><a class="dropdown-item" href="home2.html">Home 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center ms-lg-4 mt-3 mt-lg-0">
+                    <button id="theme-toggle" class="btn btn-link p-0 me-3">
+                        <i data-lucide="sun"></i>
+                    </button>
+                    <button id="rtl-toggle" class="btn btn-link p-0 me-3">
+                        <i data-lucide="arrow-left-right"></i>
+                    </button>
+                    <a href="register.html" class="btn btn-primary">Signup</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section (Lodge Theme) -->
+    <section class="hero-section wood-grain"
+        style="background-image: url('assets/images/home2-hero.png'); background-size: cover; background-position: center;">
+        <div class="hero-overlay" style="background: linear-gradient(rgba(26, 26, 26, 0.8), rgba(26, 26, 26, 0.95));">
+        </div>
+        <div class="ember-container"></div>
+        <div class="container hero-content text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <span class="text-highlight display-font h4 mb-3 d-block" data-aos="fade-down">Private Events &
+                        Group Bookings</span>
+                    <h1 class="display-1 text-white mb-4" data-aos="fade-up">Your Next Group Event <br><span
+                            class="text-highlight">Just Got an Edge.</span></h1>
+                    <p class="lead text-light mb-5 mx-auto" style="max-width: 700px;" data-aos="fade-up"
+                        data-aos-delay="200">
+                        Ditch the boring bowling alleys and office happy hours. Bring your team, your friends, or your
+                        date to Austin's most exciting target sport lounge.
+                    </p>
+                    <div class="d-flex flex-column flex-sm-row justify-content-center gap-3" data-aos="fade-up"
+                        data-aos-delay="400">
+                        <a href="#inquiry-form" class="btn btn-primary btn-lg">Request a Custom Quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Occasion Selector -->
+    <section class="section-padding bg-body" id="packages">
+        <div class="container">
+            <div class="row mb-5 text-center" data-aos="fade-up">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="display-4">Choose Your <span class="text-highlight">Occasion</span></h2>
+                    <p class="text-muted">Tailored packages for every type of throwdown.</p>
+                </div>
+            </div>
+
+            <!-- Selector Tabs -->
+            <div class="row g-2 mb-5" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-6 col-md-4 col-lg-2 ms-lg-auto">
+                    <button class="occasion-btn active" data-filter="birthday">Birthday</button>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <button class="occasion-btn occasion-btn-static">Party</button>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <button class="occasion-btn occasion-btn-static">Corporate</button>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <button class="occasion-btn occasion-btn-static">Date Night</button>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 me-lg-auto">
+                    <button class="occasion-btn occasion-btn-static">Just For Fun</button>
+                </div>
+            </div>
+
+            <!-- Occasion Cards -->
+            <div class="row g-4 justify-content-center">
+                <!-- Birthday -->
+                <div class="col-lg-4 occasion-card" data-category="birthday" data-aos="zoom-in">
+                    <div class="service-card h-100">
+                        <div class="position-relative">
+                            <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&q=80&w=600"
+                                alt="Birthday" class="img-fluid occasion-card-img">
+                        </div>
+                        <div class="p-4">
+                            <h4>Birthday Throwdown</h4>
+                            <p class="small text-muted mb-4">The ultimate party experience. Private lane, custom
+                                scoring, and a dedicated host to keep the energy high.</p>
+                            <ul class="list-unstyled mb-4 small">
+                                <li class="mb-2"><i data-lucide="users" class="text-highlight me-2"
+                                        style="width: 14px;"></i> Up to 10 Guests</li>
+                                <li class="mb-2"><i data-lucide="clock" class="text-highlight me-2"
+                                        style="width: 14px;"></i> 2 Hours of Throwing</li>
+                                <li class="mb-2"><i data-lucide="award" class="text-highlight me-2"
+                                        style="width: 14px;"></i> Trophy for the Winner</li>
+                            </ul>
+                            <a href="javascript:void(0)" class="btn btn-primary w-100 shadow-sm">Package Details</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bachelor -->
+                <div class="col-lg-4 occasion-card" data-category="bachelor" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="service-card h-100">
+                        <div class="position-relative">
+                            <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&q=80&w=600"
+                                alt="Bachelor" class="img-fluid occasion-card-img">
+                        </div>
+                        <div class="p-4">
+                            <h4>The Ultimate Send-Off</h4>
+                            <p class="small text-muted mb-4">Bachelor or bachelorette, we've got you. Themed scoring
+                                games, photo ops, and optional bar tabs.</p>
+                            <ul class="list-unstyled mb-4 small">
+                                <li class="mb-2"><i data-lucide="users" class="text-highlight me-2"
+                                        style="width: 14px;"></i> Up to 15 Guests</li>
+                                <li class="mb-2"><i data-lucide="clock" class="text-highlight me-2"
+                                        style="width: 14px;"></i> 2.5 Hours of Throwing</li>
+                                <li class="mb-2"><i data-lucide="camera" class="text-highlight me-2"
+                                        style="width: 14px;"></i> Themed Photo Props</li>
+                            </ul>
+                            <a href="javascript:void(0)" class="btn btn-primary w-100 shadow-sm">Package Details</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Corporate -->
+                <div class="col-lg-4 occasion-card" data-category="corporate" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="service-card h-100">
+                        <div class="position-relative">
+                            <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=600"
+                                alt="Corporate" class="img-fluid occasion-card-img">
+                        </div>
+                        <div class="p-4">
+                            <h4>Team Building Smash</h4>
+                            <p class="small text-muted mb-4">Build trust and foster competition. Branded scoring, live
+                                leaderboards, and catering options.</p>
+                            <ul class="list-unstyled mb-4 small">
+                                <li class="mb-2"><i data-lucide="users" class="text-highlight me-2"
+                                        style="width: 14px;"></i> 10-50 Guests</li>
+                                <li class="mb-2"><i data-lucide="clock" class="text-highlight me-2"
+                                        style="width: 14px;"></i> 3 Hours + Private Space</li>
+                                <li class="mb-2"><i data-lucide="utensils" class="text-highlight me-2"
+                                        style="width: 14px;"></i> Catering Available</li>
+                            </ul>
+                            <a href="javascript:void(0)" class="btn btn-primary w-100 shadow-sm">Package Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Featured Event Section -->
+    <section class="section-padding bg-dark wood-grain position-relative venue-highlight">
+        <div class="hero-overlay opacity-90"></div>
+        <div class="container position-relative z-3">
+            <div class="row align-items-stretch">
+                <div class="col-lg-6 mb-5 mb-lg-0 venue-highlight-content" data-aos="fade-right">
+                    <span class="text-highlight text-uppercase small letter-spacing-2 fw-bold mb-3 d-block"
+                        style="color: var(--highlight-color) !important;">Featured
+                        Venue Highlight</span>
+                    <h2 class="display-4  mb-4 vip-lounge-title" style="color: var(--highlight-color) !important;">The
+                        VIP
+                        <span class="text-highlight" style="color: var(--highlight-color) !important;">Lounge</span>
+                    </h2>
+                    <p class="text-light opacity-75 mb-4">Experience axe throwing in luxury. Our VIP lounge features
+                        private lanes, premium leather seating, and dedicated bottle service for groups of up to 20.</p>
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="me-4">
+                            <h3 class="text-white mb-0">20</h3>
+                            <p class="small text-muted mb-0">Guest Capacity</p>
+                        </div>
+                        <div class="border-start border-secondary ps-4 me-4">
+                            <h3 class="text-white mb-0">Private</h3>
+                            <p class="small text-muted mb-0">Lanes</p>
+                        </div>
+                        <div class="border-start border-secondary ps-4">
+                            <h3 class="text-white mb-0">Yes</h3>
+                            <p class="small text-muted mb-0">Host Service</p>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary">Book VIP Experience</a>
+                </div>
+                <div class="col-lg-6 d-flex" data-aos="fade-left">
+                    <img src="assets/images/vip.png" alt="VIP Lounge"
+                        class="rounded shadow-lg border border-secondary w-100"
+                        style="object-fit: cover; height: 100%; min-height: 350px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section-padding bg-body">
+        <div class="container">
+            <div class="row mb-5 text-center" data-aos="fade-up">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="display-4">What They <span class="text-highlight">Say</span></h2>
+                    <p class="text-muted">Real reviews from our throwers.</p>
+                </div>
+            </div>
+            <div class="row g-4 d-flex">
+                <div class="col-md-4 d-flex" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card p-4 text-center w-100 h-100 flex-column justify-content-between">
+                        <div>
+                            <div class="mb-3">
+                                <i data-lucide="star" class="text-highlight" fill="currentColor"></i>
+                                <i data-lucide="star" class="text-highlight" fill="currentColor"></i>
+                                <i data-lucide="star" class="text-highlight" fill="currentColor"></i>
+                                <i data-lucide="star" class="text-highlight" fill="currentColor"></i>
+                                <i data-lucide="star" class="text-highlight" fill="currentColor"></i>
+                            </div>
+                            <p class="fst-italic">"Best birthday party ever! The coaches were super helpful and we all
+                                nailed the bullseye by the end of the night."</p>
+                        </div>
+                        <div class="mt-4">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=100"
+                                class="rounded-circle mb-2" width="60" height="60" style="object-fit:cover;" alt="User">
+                            <h6 class="mb-0">Sarah Jenkins</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card p-4 text-center w-100 h-100 flex-column justify-content-between">
+                        <div>
+                            <div class="mb-3">
+                                <i data-lucide="star" class="text-highlight" fill="currentColor"></i>
+                                <i data-lucide="star" class="text-highlight" fill="currentColor"></i>
+                                <i data-lucide="star" class="text-highlight" fill="currentColor"></i>
+                                <i data-lucide="star" class="text-highlight" fill="currentColor"></i>
+                                <i data-lucide="star" class="text-highlight" fill="currentColor"></i>
+                            </div>
+                            <p class="fst-italic">"Our corporate team building event was a massive success. Highly
+                                recommend for any group looking for something different."</p>
+                        </div>
+                        <div class="mt-4">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=100"
+                                class="rounded-circle mb-2" width="60" height="60" style="object-fit:cover;" alt="User">
+                            <h6 class="mb-0">Michael Rodriguez</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card p-4 text-center w-100 h-100 flex-column justify-content-between">
+                        <div>
+                            <div class="mb-3">
+                                <i data-lucide="star" class="text-highlight" fill="currentColor"></i>
+                                <i data-lucide="star" class="text-highlight" fill="currentColor"></i>
+                                <i data-lucide="star" class="text-highlight" fill="currentColor"></i>
+                                <i data-lucide="star" class="text-highlight" fill="currentColor"></i>
+                                <i data-lucide="star" class="text-highlight" fill="currentColor"></i>
+                            </div>
+                            <p class="fst-italic">"Joined the league and I'm addicted. The community here is fantastic
+                                and the facilities are top-notch."</p>
+                        </div>
+                        <div class="mt-4">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100"
+                                class="rounded-circle mb-2" width="60" height="60" style="object-fit:cover;" alt="User">
+                            <h6 class="mb-0">David Chen</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Food & Drinks Section -->
+    <section class="section-padding bg-body-tertiary">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=800"
+                        alt="Drinks" class="img-fluid rounded shadow-lg">
+                </div>
+                <div class="col-lg-6 ps-lg-5 mt-5 mt-lg-0" data-aos="fade-left">
+                    <h2 class="display-4 mb-4">Fuel Your <span class="text-highlight">Fire</span></h2>
+                    <p class="mb-4">No event is complete without the right refreshments. Our full-service bar features
+                        local Austin craft beers, signature cocktails, and a selection of shareable bites.</p>
+                    <ul class="list-unstyled mb-5">
+                        <li class="mb-3 d-flex align-items-center"><i data-lucide="beer"
+                                class="text-highlight me-3"></i> 16 Rotating Craft Taps</li>
+                        <li class="mb-3 d-flex align-items-center"><i data-lucide="glass-water"
+                                class="text-highlight me-3"></i> Artisanal Cocktails</li>
+                        <li class="mb-3 d-flex align-items-center"><i data-lucide="pizza"
+                                class="text-highlight me-3"></i> Gourmet Shareable Platters</li>
+                    </ul>
+                    <a href="services.html" class="btn btn-outline-highlight">View Menu</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Safety First Section -->
+    <section class="section-padding bg-body">
+        <div class="container text-center">
+            <div class="row justify-content-center mb-5" data-aos="fade-up">
+                <div class="col-lg-8">
+                    <h2 class="display-4">Your Safety, <span class="text-highlight">Our Priority</span></h2>
+                    <p class="text-muted">Axe throwing is a blast, but we take safety seriously. Every session starts
+                        with a comprehensive briefing.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-4 border border-secondary rounded">
+                        <i data-lucide="shield" class="text-highlight mb-3" style="width: 48px; height: 48px;"></i>
+                        <h4>Certified Coaches</h4>
+                        <p class="small text-muted">Every lane is supervised by a WATL-certified coach who ensures all
+                            safety protocols are followed.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="p-4 border border-secondary rounded">
+                        <i data-lucide="lock" class="text-highlight mb-3" style="width: 48px; height: 48px;"></i>
+                        <h4>Secure Lanes</h4>
+                        <p class="small text-muted">Our lanes are designed with high-density dividers and safety nets to
+                            prevent bounce-backs.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="p-4 border border-secondary rounded">
+                        <i data-lucide="heart-pulse" class="text-highlight mb-3" style="width: 48px; height: 48px;"></i>
+                        <h4>Zero-Tolerance Policy</h4>
+                        <p class="small text-muted">We maintain a strict code of conduct to ensure a fun and safe
+                            environment for everyone.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Inquiry Form -->
+    <section class="section-padding bg-dark wood-grain position-relative inquiry-highlight" id="inquiry-form">
+        <div class="hero-overlay opacity-90"></div>
+        <div class="container position-relative z-3">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="card bg-dark border-secondary p-4 p-md-5">
+                        <div class="row">
+                            <div class="col-lg-5 mb-4 mb-lg-0">
+                                <h2 class="display-5 text-white mb-4">Get a <span class="text-highlight">Custom
+                                        Quote</span></h2>
+                                <p class="text-light opacity-75 mb-5">Tell us about your event, and our coordinator will
+                                    get back to you within 24 hours.</p>
+                                <ul class="list-unstyled text-light opacity-75">
+                                    <li class="mb-3"><i data-lucide="check" class="text-highlight me-2"></i> Guaranteed
+                                        lane availability</li>
+                                    <li class="mb-3"><i data-lucide="check" class="text-highlight me-2"></i> Custom
+                                        catering menus</li>
+                                    <li class="mb-3"><i data-lucide="check" class="text-highlight me-2"></i> Dedicated
+                                        event support</li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-7">
+                                <form class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label text-white small">Full Name</label>
+                                        <input type="text" class="form-control bg-dark border-secondary text-white"
+                                            placeholder="John Doe" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label text-white small">Email Address</label>
+                                        <input type="email" class="form-control bg-dark border-secondary text-white"
+                                            placeholder="john@example.com" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label text-white small">Group Size</label>
+                                        <input type="number" class="form-control bg-dark border-secondary text-white"
+                                            placeholder="e.g. 15" required>
+                                        <div class="form-text text-accent small">Min. 10 people for group rates</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label text-white small">Preferred Date</label>
+                                        <input type="date" style="background: transparent; color-scheme: dark;"
+                                            class="form-control border-secondary text-white date-picker" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label text-white small">Event Type</label>
+                                        <select class="form-select bg-dark border-secondary text-white">
+                                            <option selected>Birthday Party</option>
+                                            <option>Bachelor/Bachelorette</option>
+                                            <option>Corporate Team Building</option>
+                                            <option>Wedding Celebration</option>
+                                            <option>Other</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-primary w-100 py-3">Submit Inquiry</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <a class="navbar-brand d-flex align-items-center mb-4" href="index.html">
+                        <i data-lucide="axe" class="me-2 text-highlight"></i>
+                        <span class="h3 mb-0 display-font">AxeHaus</span>
+                    </a>
+                    <p class="small opacity-75 mb-4">Austin's premier axe throwing and hatchet lounge. Providing a safe,
+                        high-energy environment for recreational and competitive throwers alike.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="social-icon-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5>Quick Links</h5>
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="about.html" class="footer-link">About Us</a>
+                    <a href="services.html" class="footer-link">Packages</a>
+                    <a href="pricing.html" class="footer-link">Pricing</a>
+                    <a href="blog.html" class="footer-link">Blog</a>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5>Resources</h5>
+                    <a href="contact.html" class="footer-link">Online Waiver</a>
+                    <a href="#" class="footer-link">Safety Rules</a>
+                    <a href="#" class="footer-link">League Rules</a>
+                    <a href="contact.html" class="footer-link">Gift Cards</a>
+                    <a href="documentation/index.html" class="footer-link">Documentation</a>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Newsletter</h5>
+                    <p class="small opacity-75 mb-3">Get early access to tournament registrations &amp; venue
+                        promotions.</p>
+                    <form class="d-flex flex-column flex-sm-row gap-2">
+                        <input type="email" class="form-control bg-dark border-secondary text-white w-100"
+                            placeholder="Email Address">
+                        <button class="btn btn-primary w-100 footer-btn" type="submit">Join</button>
+                    </form>
+                    <div class="mt-4 small">
+                        <p class="mb-1"><i data-lucide="map-pin" class="text-highlight me-2" style="width: 14px;"></i>
+                            123 Woodcutters Way, Austin, TX 78701</p>
+                        <p class="mb-0"><i data-lucide="phone" class="text-highlight me-2" style="width: 14px;"></i>
+                            (512) 555-0199</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-5 border-secondary border-opacity-25">
+            <div class="text-center">
+                <p class="small mb-0">&copy; 2026 AxeHaus. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll Top Button -->
+    <button id="scroll-top" class="btn btn-primary rounded-circle position-fixed bottom-0 end-0 m-4 d-none"
+        style="z-index: 1000; width: 50px; height: 50px; padding: 0;">
+        <i data-lucide="arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/occasion-selector.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

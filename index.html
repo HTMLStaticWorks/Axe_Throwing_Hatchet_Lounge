@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en" data-bs-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ironwood Hatchet Lounge | Axe Throwing & Hatchet Venue</title>
-    <meta name="description" content="Throw. Hit. Repeat. Experience the most fun you'll have with a sharp object at Austin's premier axe throwing lounge.">
-    
+    <title>AxeHaus | Artisan Dessert Venue</title>
+    <meta name="description"
+        content="Throw. Hit. Repeat. Experience the most fun you'll have with a sharp object at Austin's premier axe throwing lounge.">
+
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- AOS Animation CSS -->
@@ -14,29 +16,38 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark-mode.css">
     <link rel="stylesheet" href="assets/css/rtl.css">
-    
+
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-axe'><path d='m14 12-8.5 8.5a2.12 2.12 0 1 1-3-3L11 9'/><path d='M15 13 9 7l4-4 6 6h3a8 8 0 0 1-7 7z'/></svg>">
 </head>
+
 <body>
 
+
+
+
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
                 <i data-lucide="axe" class="me-2 text-highlight"></i>
-                <span class="h3 mb-0 text-white display-font">IRONWOOD <span class="text-highlight">HATCHET</span></span>
+                <span class="h3 mb-0 display-font">AxeHaus</span>
             </a>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <i data-lucide="menu" class="text-white"></i>
+                <i data-lucide="menu"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-highlight" href="#" role="button" data-bs-toggle="dropdown">Home</a>
-                        <ul class="dropdown-menu bg-dark border-secondary">
-                            <li><a class="dropdown-item text-white" href="index.html">General Landing</a></li>
-                            <li><a class="dropdown-item text-white" href="home-2.html">Group Events Focus</a></li>
+                        <a class="nav-link dropdown-toggle active" href="#" role="button"
+                            data-bs-toggle="dropdown">Home</a>
+                        <ul class="dropdown-menu  border-secondary">
+                            <li><a class="dropdown-item " href="index.html">Home 1</a></li>
+                            <li><a class="dropdown-item " href="home2.html">Home 2</a></li>
                         </ul>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
@@ -46,48 +57,42 @@
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
                 <div class="d-flex align-items-center ms-lg-4 mt-3 mt-lg-0">
-                    <button id="theme-toggle" class="btn btn-link text-white p-0 me-3">
+                    <button id="theme-toggle" class="btn btn-link p-0 me-3">
                         <i data-lucide="sun"></i>
                     </button>
-                    <a href="contact.html" class="btn btn-primary">Book a Lane</a>
+                    <button id="rtl-toggle" class="btn btn-link p-0 me-3">
+                        <i data-lucide="arrow-left-right"></i>
+                    </button>
+                    <a href="register.html" class="btn btn-primary">Signup</a>
                 </div>
             </div>
         </div>
     </nav>
 
+
+
+
     <!-- Hero Section -->
-    <section class="hero-section wood-grain">
-        <div class="hero-overlay"></div>
+    <section class="hero-section"
+        style="background-image: url('assets/images/home1-hero.png'); background-size: cover; background-position: center;">
         <div class="ember-container"></div>
         <div class="container hero-content text-center">
             <div class="row justify-content-center">
                 <div class="col-lg-10">
-                    <span class="badge bg-highlight mb-3 px-3 py-2 text-uppercase" data-aos="fade-down">Austin's #1 Entertainment Venue</span>
-                    <h1 class="display-1 text-white mb-4" data-aos="fade-up">Throw. Hit. Repeat. <br><span class="text-highlight">The Most Fun You'll Have</span> <br>With a Sharp Object.</h1>
-                    <p class="lead text-light mb-5 mx-auto" style="max-width: 700px;" data-aos="fade-up" data-aos-delay="200">
-                        Whether it's a date night, a corporate bash, or a weekly league, Ironwood Hatchet Lounge brings the intensity and the celebration to every throw.
+                    <span class="badge bg-highlight mb-3 px-3 py-2 text-uppercase" data-aos="fade-down">Austin's #1
+                        Entertainment Venue</span>
+                    <h1 class="display-1 text-white mb-4" data-aos="fade-up">Throw. Hit. Repeat. <br><span
+                            class="text-highlight">The Most Fun You'll Have</span> <br>With a Sharp Object.</h1>
+                    <p class="lead text-light mb-5 mx-auto" style="max-width: 700px;" data-aos="fade-up"
+                        data-aos-delay="200">
+                        Whether it's a date night, a corporate bash, or a weekly league, AxeHaus brings the intensity
+                        and the celebration to every throw.
                     </p>
-                    <div class="d-flex flex-column flex-sm-row justify-content-center gap-3" data-aos="fade-up" data-aos-delay="400">
-                        <a href="contact.html" class="btn btn-primary btn-lg">Book Your Lane Online</a>
-                        <a href="services.html" class="btn btn-outline-light btn-lg">View Event Packages</a>
-                    </div>
+
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Trust Bar -->
-    <div class="bg-black py-4 border-bottom border-secondary border-opacity-25">
-        <div class="container">
-            <div class="row align-items-center text-center text-uppercase small text-accent letter-spacing-1">
-                <div class="col-6 col-md-auto mb-2 mb-md-0 px-4">Walk-Ins Welcome</div>
-                <div class="col-6 col-md-auto mb-2 mb-md-0 px-4 border-start border-secondary border-opacity-25">All Skill Levels</div>
-                <div class="col-6 col-md-auto mb-2 mb-md-0 px-4 border-start border-secondary border-opacity-25">Certified Coaches</div>
-                <div class="col-6 col-md-auto mb-2 mb-md-0 px-4 border-start border-secondary border-opacity-25">21+ Evening Sessions</div>
-                <div class="col-12 col-md-auto mt-2 mt-md-0 px-4 border-start border-secondary border-opacity-25">Private Event Spaces</div>
-            </div>
-        </div>
-    </div>
 
     <!-- Experience Highlights -->
     <section class="section-padding bg-body">
@@ -101,41 +106,49 @@
             <div class="row g-4">
                 <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-card axe-embed-hover">
-                        <img src="https://images.unsplash.com/photo-1599058917233-5574bc362031?auto=format&fit=crop&q=80&w=600" alt="Open Lane" class="img-fluid">
+                        <img src="assets/images/open-lane.jpg" alt="Open Lane" class="img-fluid">
                         <div class="p-4">
                             <h4>Open Lane Sessions</h4>
                             <p class="small text-muted">Drop-in recreational throwing with friends. Coach included!</p>
-                            <a href="services.html" class="text-highlight text-decoration-none small text-uppercase fw-bold">Learn More →</a>
+                            <a href="services.html"
+                                class="text-highlight text-decoration-none small text-uppercase fw-bold">Learn More
+                                ?</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
                     <div class="service-card axe-embed-hover">
-                        <img src="https://images.unsplash.com/photo-1595152230381-f2f283287383?auto=format&fit=crop&q=80&w=600" alt="League Play" class="img-fluid">
+                        <img src="assets/images/league.jpg" alt="League" class="img-fluid">
                         <div class="p-4">
                             <h4>League Play</h4>
                             <p class="small text-muted">Join our weekly competitive seasons and climb the ranks.</p>
-                            <a href="services.html" class="text-highlight text-decoration-none small text-uppercase fw-bold">Join League →</a>
+                            <a href="services.html"
+                                class="text-highlight text-decoration-none small text-uppercase fw-bold">Join League
+                                ?</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
                     <div class="service-card axe-embed-hover">
-                        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=600" alt="Events" class="img-fluid">
+                        <img src="assets/images/events.webp" alt="Events" class="img-fluid">
                         <div class="p-4">
                             <h4>Group & Private Events</h4>
                             <p class="small text-muted">Birthdays, bachelors, or just because. We host it all.</p>
-                            <a href="services.html" class="text-highlight text-decoration-none small text-uppercase fw-bold">Plan Event →</a>
+                            <a href="services.html"
+                                class="text-highlight text-decoration-none small text-uppercase fw-bold">Plan Event
+                                ?</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
                     <div class="service-card axe-embed-hover">
-                        <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&q=80&w=600" alt="Tournaments" class="img-fluid">
+                        <img src="assets/images/tournaments.jpg" alt="Tournaments" class="img-fluid">
                         <div class="p-4">
                             <h4>Tournaments</h4>
                             <p class="small text-muted">Monthly ranked events with cash prizes and trophies.</p>
-                            <a href="services.html" class="text-highlight text-decoration-none small text-uppercase fw-bold">View Calendar →</a>
+                            <a href="services.html"
+                                class="text-highlight text-decoration-none small text-uppercase fw-bold">View Calendar
+                                ?</a>
                         </div>
                     </div>
                 </div>
@@ -143,64 +156,139 @@
         </div>
     </section>
 
-    <!-- How It Works -->
-    <section class="section-padding bg-dark wood-grain position-relative overflow-hidden">
-        <div class="hero-overlay opacity-75"></div>
-        <div class="container position-relative z-3 text-white">
+
+    <!-- Statistics/Charts -->
+    <section class="section-padding bg-dark text-white wood-grain position-relative">
+        <div class="container position-relative z-3">
             <div class="row mb-5 text-center" data-aos="fade-up">
                 <div class="col-lg-8 mx-auto">
-                    <h2 class="display-4">How It <span class="text-highlight">Works</span></h2>
-                    <p class="text-light opacity-75">Your journey from rookie to axe-pro in 4 simple steps.</p>
+                    <h2 class="display-4 text-white">Our <span class="text-highlight">Impact</span></h2>
+                    <p class="text-white">By the numbers.</p>
+                </div>
+            </div>
+            <div class="row g-4 text-center">
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+                    <i data-lucide="target" class="text-highlight mb-3" style="width: 48px; height: 48px;"></i>
+                    <h3 class="display-4 text-white counter" data-target="50000">0</h3>
+                    <p class="text-uppercase small letter-spacing-1 text-white">Bullseyes Hit</p>
+                </div>
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+                    <i data-lucide="users" class="text-highlight mb-3" style="width: 48px; height: 48px;"></i>
+                    <h3 class="display-4 text-white counter" data-target="25000">0</h3>
+                    <p class="text-uppercase small letter-spacing-1 text-white">Happy Throwers</p>
+                </div>
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+                    <i data-lucide="award" class="text-highlight mb-3" style="width: 48px; height: 48px;"></i>
+                    <h3 class="display-4 text-white counter" data-target="150">0</h3>
+                    <p class="text-uppercase small letter-spacing-1 text-white">Tournaments Hosted</p>
+                </div>
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
+                    <i data-lucide="calendar" class="text-highlight mb-3" style="width: 48px; height: 48px;"></i>
+                    <h3 class="display-4 text-white counter" data-target="5">0</h3>
+                    <p class="text-uppercase small letter-spacing-1 text-white">Years in Austin</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Venue Section -->
+    <section class="section-padding bg-body-tertiary">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
+                    <h2 class="display-4 mb-4">Step Into <span class="text-highlight">The Lodge</span></h2>
+                    <p class="mb-4">AxeHaus isn't just a throwing range; it's a high-energy lounge designed for
+                        celebration. With 12 premium lanes, a full-service bar, and a vibe that's part mountain retreat
+                        and part urban playground.</p>
+                    <p class="text-muted mb-5">Whether you're here for the competition or the community, our venue
+                        provides the perfect backdrop for your next victory.</p>
+                    <div class="row g-4">
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center mb-3">
+                                <i data-lucide="shield-check" class="text-highlight me-3"></i>
+                                <h6 class="mb-0">Safety First Certified</h6>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <i data-lucide="music" class="text-highlight me-3"></i>
+                                <h6 class="mb-0">Live DJ Weekends</h6>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center mb-3">
+                                <i data-lucide="beer" class="text-highlight me-3"></i>
+                                <h6 class="mb-0">Craft Beer Selection</h6>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <i data-lucide="wifi" class="text-highlight me-3"></i>
+                                <h6 class="mb-0">Free High-Speed Wi-Fi</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <img src="assets/images/step1.png" alt="Venue 1" class="img-fluid rounded shadow-lg mb-3">
+                            <img src="assets/images/step2.png" alt="Venue 2" class="img-fluid rounded shadow-lg">
+                        </div>
+                        <div class="col-6">
+                            <img src="assets/images/step3.png" alt="Venue 3" class="img-fluid rounded shadow-lg mb-3">
+                            <img src="assets/images/step4.png" alt="Venue 4" class="img-fluid rounded shadow-lg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Coaches Section -->
+    <section class="section-padding bg-body">
+        <div class="container">
+            <div class="row mb-5 text-center" data-aos="fade-up">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="display-4">Master The <span class="text-highlight">Throw</span></h2>
+                    <p class="text-muted">Learn from the best. Our certified coaches are here to help you nail every
+                        bullseye.</p>
                 </div>
             </div>
             <div class="row g-4">
-                <div class="col-md-3 text-center" data-aos="fade-right" data-aos-delay="100">
-                    <div class="h1 display- font text-highlight mb-3">01</div>
-                    <h4>Book Online</h4>
-                    <p class="small opacity-75">Reserve your lane and time slot in seconds.</p>
-                </div>
-                <div class="col-md-3 text-center" data-aos="fade-right" data-aos-delay="200">
-                    <div class="h1 display-font text-highlight mb-3">02</div>
-                    <h4>Sign Waiver</h4>
-                    <p class="small opacity-75">Complete your digital waiver before you arrive.</p>
-                </div>
-                <div class="col-md-3 text-center" data-aos="fade-right" data-aos-delay="300">
-                    <div class="h1 display-font text-highlight mb-3">03</div>
-                    <h4>Get Coached</h4>
-                    <p class="small opacity-75">Our pros will teach you the perfect throw.</p>
-                </div>
-                <div class="col-md-3 text-center" data-aos="fade-right" data-aos-delay="400">
-                    <div class="h1 display-font text-highlight mb-3">04</div>
-                    <h4>Throw & Score</h4>
-                    <p class="small opacity-75">Nail the bullseye and celebrate with drinks!</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Safety Video Placeholder -->
-    <section class="section-padding">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
-                    <h2 class="display-5 mb-4">Safety Is Our <br><span class="text-highlight">Sport Too</span></h2>
-                    <p class="mb-4">Before you pick up an axe, we make sure you're ready. Our certified coaches walk every guest through the basics of safety, technique, and lane etiquette.</p>
-                    <ul class="list-unstyled mb-5">
-                        <li class="mb-2"><i data-lucide="check-circle" class="text-highlight me-2"></i> Dedicated coach for every lane</li>
-                        <li class="mb-2"><i data-lucide="check-circle" class="text-highlight me-2"></i> Mandatary 5-minute safety briefing</li>
-                        <li class="mb-2"><i data-lucide="check-circle" class="text-highlight me-2"></i> WATL & IATF certified venue</li>
-                    </ul>
-                    <a href="about.html" class="btn btn-outline-secondary">Learn About Our Safety Rules</a>
-                </div>
-                <div class="col-lg-6" data-aos="fade-left">
-                    <div class="video-placeholder rounded-0 overflow-hidden position-relative shadow-lg" data-video-id="dQw4w9WgXcQ" style="aspect-ratio: 16/9; background: url('https://images.unsplash.com/photo-1599058917233-5574bc362031?auto=format&fit=crop&q=80&w=800') center/cover; cursor: pointer;">
-                        <div class="position-absolute top-0 left-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-50">
-                            <div class="btn-play bg-highlight rounded-circle d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
-                                <i data-lucide="play" class="text-white" style="width: 32px; height: 32px;"></i>
-                            </div>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="team-card p-0 text-center h-100 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400"
+                            alt="Coach 1" class="img-fluid w-100 mb-0" style="height: 300px; object-fit: cover;">
+                        <div class="p-4">
+                            <h4>Alex Rivera</h4>
+                            <p class="text-highlight small text-uppercase fw-bold mb-0">Head Coach</p>
                         </div>
-                        <div class="position-absolute bottom-0 left-0 w-100 p-3 bg-gradient-to-t from-dark">
-                            <span class="small text-white text-uppercase letter-spacing-1">Watch: Safety Intro (2 Mins)</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="team-card p-0 text-center h-100 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=400"
+                            alt="Coach 2" class="img-fluid w-100 mb-0" style="height: 300px; object-fit: cover;">
+                        <div class="p-4">
+                            <h4>Sarah Chen</h4>
+                            <p class="text-highlight small text-uppercase fw-bold mb-0">Senior Coach</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="team-card p-0 text-center h-100 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400"
+                            alt="Coach 3" class="img-fluid w-100 mb-0" style="height: 300px; object-fit: cover;">
+                        <div class="p-4">
+                            <h4>Marcus Bell</h4>
+                            <p class="text-highlight small text-uppercase fw-bold mb-0">League Director</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                    <div class="team-card p-0 text-center h-100 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=400"
+                            alt="Coach 4" class="img-fluid w-100 mb-0" style="height: 300px; object-fit: cover;">
+                        <div class="p-4">
+                            <h4>Jackson Ford</h4>
+                            <p class="text-highlight small text-uppercase fw-bold mb-0">Event Specialist</p>
                         </div>
                     </div>
                 </div>
@@ -208,174 +296,77 @@
         </div>
     </section>
 
-    <!-- Pricing Teaser -->
-    <section class="section-padding bg-dark text-white wood-grain position-relative">
-        <div class="hero-overlay opacity-90"></div>
-        <div class="container position-relative z-3">
-            <div class="row align-items-center">
-                <div class="col-lg-8" data-aos="fade-up">
-                    <h2 class="display-4">Lanes from <span class="text-highlight">$25/person/hr</span></h2>
-                    <p class="lead opacity-75">All equipment included. No experience needed. 100% fun guaranteed.</p>
-                </div>
-                <div class="col-lg-4 text-lg-end" data-aos="fade-up" data-aos-delay="200">
-                    <a href="pricing.html" class="btn btn-primary btn-lg px-5">View Full Pricing Table</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Tournament Teaser -->
-    <section class="section-padding">
-        <div class="container">
-            <div class="row mb-5 align-items-end" data-aos="fade-up">
-                <div class="col-lg-6">
-                    <h2 class="display-4">Upcoming <span class="text-highlight">Tournaments</span></h2>
-                    <p class="text-muted mb-0">Think you have what it takes? Register for our next ranked event.</p>
-                </div>
-                <div class="col-lg-6 text-lg-end">
-                    <a href="services.html" class="btn btn-link text-highlight text-decoration-none p-0 text-uppercase fw-bold">See All Events →</a>
-                </div>
-            </div>
-            <div id="tournament-calendar">
-                <!-- JS will populate this -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Social Proof -->
-    <section class="section-padding bg-body border-top border-secondary border-opacity-10">
+    <!-- Testimonials -->
+    <section class="section-padding bg-body">
         <div class="container">
             <div class="row mb-5 text-center" data-aos="fade-up">
                 <div class="col-lg-8 mx-auto">
-                    <h2 class="display-4">#Ironwood<span class="text-highlight">Lounge</span></h2>
-                    <p class="text-muted">Tag us in your action shots for a chance to be featured!</p>
+                    <h2 class="display-4">What They <span class="text-highlight">Say</span></h2>
+                    <p class="text-muted">Real reviews from our throwers.</p>
                 </div>
             </div>
-            <div class="row g-2">
-                <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="100">
-                    <img src="https://images.unsplash.com/photo-1599058917233-5574bc362031?auto=format&fit=crop&q=80&w=400" alt="Insta 1" class="img-fluid axe-embed-hover">
-                </div>
-                <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="https://images.unsplash.com/photo-1595152230381-f2f283287383?auto=format&fit=crop&q=80&w=400" alt="Insta 2" class="img-fluid axe-embed-hover">
-                </div>
-                <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="300">
-                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=400" alt="Insta 3" class="img-fluid axe-embed-hover">
-                </div>
-                <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="400">
-                    <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&q=80&w=400" alt="Insta 4" class="img-fluid axe-embed-hover">
-                </div>
-                <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="500">
-                    <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&q=80&w=400" alt="Insta 5" class="img-fluid axe-embed-hover">
-                </div>
-                <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="600">
-                    <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&q=80&w=400" alt="Insta 6" class="img-fluid axe-embed-hover">
-                </div>
-                <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="700">
-                    <img src="https://images.unsplash.com/photo-1520110120835-c96534a4c984?auto=format&fit=crop&q=80&w=400" alt="Insta 7" class="img-fluid axe-embed-hover">
-                </div>
-                <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="800">
-                    <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&q=80&w=400" alt="Insta 8" class="img-fluid axe-embed-hover">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="section-padding">
-        <div class="container">
-            <div class="row mb-5 text-center" data-aos="fade-up">
-                <div class="col-lg-8 mx-auto">
-                    <h2 class="display-4">Got <span class="text-highlight">Questions?</span></h2>
-                    <p class="text-muted">Everything you need to know before you throw.</p>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="accordion accordion-flush" id="faqAccordion" data-aos="fade-up">
-                        <div class="accordion-item bg-transparent border-secondary border-opacity-25">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed bg-transparent text-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                                    Do I need experience to throw axes?
-                                </button>
-                            </h2>
-                            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body text-muted">
-                                    Absolutely not! About 90% of our first-time guests have never held an axe. Our certified coaches will spend the first 10-15 minutes of your session teaching you the safety rules and the perfect throwing technique.
-                                </div>
+            <div class="row g-4 d-flex">
+                <div class="col-md-4 d-flex" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card p-4 text-center w-100 h-100 flex-column justify-content-between">
+                        <div>
+                            <div class="mb-3">
+                                <i data-lucide="star" class="text-highlight" fill="currentColor"></i>
+                                <i data-lucide="star" class="text-highlight" fill="currentColor"></i>
+                                <i data-lucide="star" class="text-highlight" fill="currentColor"></i>
+                                <i data-lucide="star" class="text-highlight" fill="currentColor"></i>
+                                <i data-lucide="star" class="text-highlight" fill="currentColor"></i>
                             </div>
+                            <p class="fst-italic">"Best birthday party ever! The coaches were super helpful and we all
+                                nailed the bullseye by the end of the night."</p>
                         </div>
-                        <div class="accordion-item bg-transparent border-secondary border-opacity-25">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed bg-transparent text-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                                    What's the minimum age to participate?
-                                </button>
-                            </h2>
-                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body text-muted">
-                                    Participants must be 12 years or older to throw. Anyone under 18 must be accompanied by a parent or legal guardian. Evening sessions after 8 PM are 21+ only.
-                                </div>
-                            </div>
+                        <div class="mt-4">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=100"
+                                class="rounded-circle mb-2" width="60" height="60" style="object-fit:cover;" alt="User">
+                            <h6 class="mb-0">Sarah Jenkins</h6>
                         </div>
-                        <div class="accordion-item bg-transparent border-secondary border-opacity-25">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed bg-transparent text-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-                                    Can I walk in or do I need a reservation?
-                                </button>
-                            </h2>
-                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body text-muted">
-                                    Walk-ins are welcome during all open hours, but lanes fill up fast—especially on weekends. We highly recommend booking online in advance to guarantee your spot.
-                                </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card p-4 text-center w-100 h-100 flex-column justify-content-between">
+                        <div>
+                            <div class="mb-3">
+                                <i data-lucide="star" class="text-highlight" fill="currentColor"></i>
+                                <i data-lucide="star" class="text-highlight" fill="currentColor"></i>
+                                <i data-lucide="star" class="text-highlight" fill="currentColor"></i>
+                                <i data-lucide="star" class="text-highlight" fill="currentColor"></i>
+                                <i data-lucide="star" class="text-highlight" fill="currentColor"></i>
                             </div>
+                            <p class="fst-italic">"Our corporate team building event was a massive success. Highly
+                                recommend for any group looking for something different."</p>
                         </div>
-                        <div class="accordion-item bg-transparent border-secondary border-opacity-25">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed bg-transparent text-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
-                                    What should I wear?
-                                </button>
-                            </h2>
-                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body text-muted">
-                                    Closed-toe shoes are mandatory—no exceptions. We recommend comfortable, loose-fitting clothing that allows for a full range of arm motion.
-                                </div>
-                            </div>
+                        <div class="mt-4">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=100"
+                                class="rounded-circle mb-2" width="60" height="60" style="object-fit:cover;" alt="User">
+                            <h6 class="mb-0">Michael Rodriguez</h6>
                         </div>
-                        <div class="accordion-item bg-transparent border-secondary border-opacity-25">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed bg-transparent text-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
-                                    Is alcohol available during sessions?
-                                </button>
-                            </h2>
-                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body text-muted">
-                                    Yes, we have a full bar featuring local craft beers, wine, and themed cocktails. However, we have a strict policy: safety first. Any guest showing signs of intoxication will not be permitted to throw.
-                                </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card p-4 text-center w-100 h-100 flex-column justify-content-between">
+                        <div>
+                            <div class="mb-3">
+                                <i data-lucide="star" class="text-highlight" fill="currentColor"></i>
+                                <i data-lucide="star" class="text-highlight" fill="currentColor"></i>
+                                <i data-lucide="star" class="text-highlight" fill="currentColor"></i>
+                                <i data-lucide="star" class="text-highlight" fill="currentColor"></i>
+                                <i data-lucide="star" class="text-highlight" fill="currentColor"></i>
                             </div>
+                            <p class="fst-italic">"Joined the league and I'm addicted. The community here is fantastic
+                                and the facilities are top-notch."</p>
                         </div>
-                        <div class="accordion-item bg-transparent border-secondary border-opacity-25">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed bg-transparent text-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
-                                    How many people fit per lane?
-                                </button>
-                            </h2>
-                            <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body text-muted">
-                                    Our standard lanes accommodate up to 6 throwers. For larger groups, we book adjacent lanes so your party can stay together.
-                                </div>
-                            </div>
+                        <div class="mt-4">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100"
+                                class="rounded-circle mb-2" width="60" height="60" style="object-fit:cover;" alt="User">
+                            <h6 class="mb-0">David Chen</h6>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Final CTA Banner -->
-    <section class="py-5 bg-highlight text-white text-center">
-        <div class="container py-4">
-            <h2 class="display-5 mb-3" data-aos="zoom-in">Lanes book fast on weekends!</h2>
-            <p class="lead mb-4" data-aos="zoom-in" data-aos-delay="100">Reserve your lane before someone else does. Don't miss out on the action.</p>
-            <a href="contact.html" class="btn btn-dark btn-lg px-5 py-3 text-uppercase" data-aos="fade-up">Book Your Lane Now</a>
         </div>
     </section>
 
@@ -384,16 +375,21 @@
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-4">
+
+
                     <a class="navbar-brand d-flex align-items-center mb-4" href="index.html">
                         <i data-lucide="axe" class="me-2 text-highlight"></i>
-                        <span class="h3 mb-0 text-white display-font">IRONWOOD <span class="text-highlight">HATCHET</span></span>
+                        <span class="h3 mb-0 display-font">AxeHaus</span>
                     </a>
-                    <p class="small opacity-75 mb-4">Austin's premier axe throwing and hatchet lounge. Providing a safe, high-energy environment for recreational and competitive throwers alike.</p>
+
+
+                    <p class="small opacity-75 mb-4">Austin's premier axe throwing and hatchet lounge. Providing a safe,
+                        high-energy environment for recreational and competitive throwers alike.</p>
                     <div class="d-flex gap-3">
-                        <a href="#" class="btn btn-outline-secondary btn-sm rounded-circle p-2"><i data-lucide="instagram" style="width: 18px; height: 18px;"></i></a>
-                        <a href="#" class="btn btn-outline-secondary btn-sm rounded-circle p-2"><i data-lucide="facebook" style="width: 18px; height: 18px;"></i></a>
-                        <a href="#" class="btn btn-outline-secondary btn-sm rounded-circle p-2"><i data-lucide="twitter" style="width: 18px; height: 18px;"></i></a>
-                        <a href="#" class="btn btn-outline-secondary btn-sm rounded-circle p-2"><i data-lucide="youtube" style="width: 18px; height: 18px;"></i></a>
+                        <a href="#" class="social-icon-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon-link"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 <div class="col-6 col-lg-2">
@@ -414,29 +410,33 @@
                 </div>
                 <div class="col-lg-4">
                     <h5>Newsletter</h5>
-                    <p class="small opacity-75 mb-3">Get early access to tournament registrations & venue promotions.</p>
-                    <form class="input-group">
-                        <input type="email" class="form-control bg-dark border-secondary text-white" placeholder="Email Address">
-                        <button class="btn btn-primary" type="submit">Join</button>
+                    <p class="small opacity-75 mb-3">Get early access to tournament registrations & venue promotions.
+                    </p>
+                    <form class="d-flex flex-column flex-sm-row gap-2">
+                        <input type="email" class="form-control bg-dark border-secondary text-white w-100"
+                            placeholder="Email Address">
+                        <button class="btn btn-primary w-100 footer-btn" type="submit">Join</button>
                     </form>
                     <div class="mt-4 small">
-                        <p class="mb-1"><i data-lucide="map-pin" class="text-highlight me-2" style="width: 14px;"></i> 123 Woodcutters Way, Austin, TX 78701</p>
-                        <p class="mb-0"><i data-lucide="phone" class="text-highlight me-2" style="width: 14px;"></i> (512) 555-0199</p>
+                        <p class="mb-1"><i data-lucide="map-pin" class="text-highlight me-2" style="width: 14px;"></i>
+                            123 Woodcutters Way, Austin, TX 78701</p>
+                        <p class="mb-0"><i data-lucide="phone" class="text-highlight me-2" style="width: 14px;"></i>
+                            (512) 555-0199</p>
                     </div>
                 </div>
             </div>
             <hr class="my-5 border-secondary border-opacity-25">
-            <div class="row align-items-center">
-                <div class="col-md-6 text-center text-md-start">
-                    <p class="small mb-0">&copy; 2026 Ironwood Hatchet Lounge. All Rights Reserved.</p>
-                </div>
-                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
-                    <a href="#" class="small text-accent text-decoration-none me-3">Privacy Policy</a>
-                    <a href="#" class="small text-accent text-decoration-none">Terms of Service</a>
-                </div>
+            <div class="text-center">
+                <p class="small mb-0">&copy; 2026 AxeHaus. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
+
+    <!-- Scroll Top Button -->
+    <button id="scroll-top" class="btn btn-primary rounded-circle position-fixed bottom-0 end-0 m-4 d-none"
+        style="z-index: 1000; width: 50px; height: 50px; padding: 0;">
+        <i data-lucide="arrow-up"></i>
+    </button>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -447,4 +447,5 @@
         lucide.createIcons();
     </script>
 </body>
+
 </html>

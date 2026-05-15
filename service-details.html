@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en" data-bs-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Corporate Team Building | Ironwood Hatchet Lounge</title>
-    
+    <title>Corporate Team Building | AxeHaus</title>
+
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- AOS Animation CSS -->
@@ -13,9 +14,11 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark-mode.css">
     <link rel="stylesheet" href="assets/css/rtl.css">
-    
+
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         .process-step {
             position: relative;
@@ -23,6 +26,7 @@
             border: 1px solid var(--border-color);
             background: var(--card-bg);
         }
+
         .step-number {
             position: absolute;
             top: -20px;
@@ -37,44 +41,72 @@
             font-family: 'Bebas Neue', sans-serif;
             font-size: 1.5rem;
         }
+
         .waiver-callout {
             border: 2px dashed var(--highlight-color);
             background: rgba(234, 88, 12, 0.05);
             padding: 2rem;
         }
     </style>
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-axe'><path d='m14 12-8.5 8.5a2.12 2.12 0 1 1-3-3L11 9'/><path d='M15 13 9 7l4-4 6 6h3a8 8 0 0 1-7 7z'/></svg>">
 </head>
+
 <body>
 
+
+
+
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top scrolled">
+    <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
                 <i data-lucide="axe" class="me-2 text-highlight"></i>
-                <span class="h3 mb-0 text-white display-font">IRONWOOD <span class="text-highlight">HATCHET</span></span>
+                <span class="h3 mb-0 display-font">Milk &amp;<span class="text-highlight"> Melt</span></span>
             </a>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <i data-lucide="menu" class="text-white"></i>
+                <i data-lucide="menu"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-highlight" href="#" role="button"
+                            data-bs-toggle="dropdown">Home</a>
+                        <ul class="dropdown-menu  border-secondary">
+                            <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+                            <li><a class="dropdown-item " href="home2.html">Home 2</a></li>
+                        </ul>
+                    </li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link text-highlight" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
                     <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
+                <div class="d-flex align-items-center ms-lg-4 mt-3 mt-lg-0">
+                    <button id="theme-toggle" class="btn btn-link p-0 me-3">
+                        <i data-lucide="sun"></i>
+                    </button>
+                    <button id="rtl-toggle" class="btn btn-link p-0 me-3">
+                        <i data-lucide="arrow-left-right"></i>
+                    </button>
+                    <a href="register.html" class="btn btn-primary">Signup</a>
+                </div>
             </div>
         </div>
     </nav>
+
+
+
 
     <!-- Hero -->
     <header class="section-padding bg-dark wood-grain text-center mt-5">
         <div class="hero-overlay opacity-75"></div>
         <div class="container position-relative z-3">
-            <h1 class="display-3 text-white mb-3" data-aos="fade-up">Corporate <span class="text-highlight">Team Building</span></h1>
-            <p class="lead text-light opacity-75 mx-auto" style="max-width: 600px;" data-aos="fade-up" data-aos-delay="100">Your team will actually want to come to this one.</p>
+            <h1 class="display-3 text-white mb-3" data-aos="fade-up">Corporate <span class="text-highlight">Team
+                    Building</span></h1>
+            <p class="lead text-light opacity-75 mx-auto" style="max-width: 600px;" data-aos="fade-up"
+                data-aos-delay="100">Your team will actually want to come to this one.</p>
         </div>
     </header>
 
@@ -84,26 +116,32 @@
             <div class="row g-5">
                 <!-- Left Content -->
                 <div class="col-lg-8">
-                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200" alt="Team Building" class="img-fluid shadow-lg mb-5" data-aos="fade-up">
-                    
-                    <h2 class="display-5 mb-4" data-aos="fade-up">What's <span class="text-highlight">Included</span></h2>
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200"
+                        alt="Team Building" class="img-fluid shadow-lg mb-5" data-aos="fade-up">
+
+                    <h2 class="display-5 mb-4" data-aos="fade-up">What's <span class="text-highlight">Included</span>
+                    </h2>
                     <div class="row g-4 mb-5" data-aos="fade-up">
                         <div class="col-md-6">
                             <ul class="list-unstyled">
                                 <li class="mb-3 d-flex align-items-start">
-                                    <i data-lucide="check-circle" class="text-highlight me-3 mt-1" style="width: 20px;"></i>
+                                    <i data-lucide="check-circle" class="text-highlight me-3 mt-1"
+                                        style="width: 20px;"></i>
                                     <span>Private lane(s) for your group</span>
                                 </li>
                                 <li class="mb-3 d-flex align-items-start">
-                                    <i data-lucide="check-circle" class="text-highlight me-3 mt-1" style="width: 20px;"></i>
+                                    <i data-lucide="check-circle" class="text-highlight me-3 mt-1"
+                                        style="width: 20px;"></i>
                                     <span>Dedicated event coach/host</span>
                                 </li>
                                 <li class="mb-3 d-flex align-items-start">
-                                    <i data-lucide="check-circle" class="text-highlight me-3 mt-1" style="width: 20px;"></i>
+                                    <i data-lucide="check-circle" class="text-highlight me-3 mt-1"
+                                        style="width: 20px;"></i>
                                     <span>Safety briefing & technique instruction</span>
                                 </li>
                                 <li class="mb-3 d-flex align-items-start">
-                                    <i data-lucide="check-circle" class="text-highlight me-3 mt-1" style="width: 20px;"></i>
+                                    <i data-lucide="check-circle" class="text-highlight me-3 mt-1"
+                                        style="width: 20px;"></i>
                                     <span>Custom team scoring on overhead screens</span>
                                 </li>
                             </ul>
@@ -111,49 +149,54 @@
                         <div class="col-md-6">
                             <ul class="list-unstyled">
                                 <li class="mb-3 d-flex align-items-start">
-                                    <i data-lucide="check-circle" class="text-highlight me-3 mt-1" style="width: 20px;"></i>
+                                    <i data-lucide="check-circle" class="text-highlight me-3 mt-1"
+                                        style="width: 20px;"></i>
                                     <span>Live leaderboard display</span>
                                 </li>
                                 <li class="mb-3 d-flex align-items-start">
-                                    <i data-lucide="check-circle" class="text-highlight me-3 mt-1" style="width: 20px;"></i>
+                                    <i data-lucide="check-circle" class="text-highlight me-3 mt-1"
+                                        style="width: 20px;"></i>
                                     <span>Tournament-format finale round</span>
                                 </li>
                                 <li class="mb-3 d-flex align-items-start">
-                                    <i data-lucide="check-circle" class="text-highlight me-3 mt-1" style="width: 20px;"></i>
+                                    <i data-lucide="check-circle" class="text-highlight me-3 mt-1"
+                                        style="width: 20px;"></i>
                                     <span>MVP award & team trophy (optional)</span>
                                 </li>
                                 <li class="mb-3 d-flex align-items-start">
-                                    <i data-lucide="check-circle" class="text-highlight me-3 mt-1" style="width: 20px;"></i>
+                                    <i data-lucide="check-circle" class="text-highlight me-3 mt-1"
+                                        style="width: 20px;"></i>
                                     <span>Optional: catering, bar service, custom jerseys</span>
                                 </li>
                             </ul>
                         </div>
                     </div>
 
-                    <h2 class="display-5 mb-4" data-aos="fade-up">Group <span class="text-highlight">Size Tiers</span></h2>
+                    <h2 class="display-5 mb-4" data-aos="fade-up">Group <span class="text-highlight">Size Tiers</span>
+                    </h2>
                     <div class="row g-3 mb-5" data-aos="fade-up">
                         <div class="col-sm-6 col-md-3 text-center">
                             <div class="p-4 border border-secondary">
                                 <h4 class="text-highlight mb-0">Small</h4>
-                                <p class="small text-muted mb-0">10–20 Guests</p>
+                                <p class="small text-muted mb-0">10�20 Guests</p>
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-3 text-center">
                             <div class="p-4 border border-secondary">
                                 <h4 class="text-highlight mb-0">Medium</h4>
-                                <p class="small text-muted mb-0">21–50 Guests</p>
+                                <p class="small text-muted mb-0">21�50 Guests</p>
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-3 text-center">
                             <div class="p-4 border border-secondary">
                                 <h4 class="text-highlight mb-0">Large</h4>
-                                <p class="small text-muted mb-0">51–100 Guests</p>
+                                <p class="small text-muted mb-0">51�100 Guests</p>
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-3 text-center">
                             <div class="p-4 border border-secondary">
                                 <h4 class="text-highlight mb-0">Buyout</h4>
-                                <p class="small text-muted mb-0">100–150 Guests</p>
+                                <p class="small text-muted mb-0">100�150 Guests</p>
                             </div>
                         </div>
                     </div>
@@ -164,28 +207,32 @@
                             <div class="process-step h-100">
                                 <div class="step-number">01</div>
                                 <h6>Inquiry & Quote</h6>
-                                <p class="small text-muted mb-0">Fill out our form and get a custom quote within 24 hours.</p>
+                                <p class="small text-muted mb-0">Fill out our form and get a custom quote within 24
+                                    hours.</p>
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-4">
                             <div class="process-step h-100">
                                 <div class="step-number">02</div>
                                 <h6>Deposit</h6>
-                                <p class="small text-muted mb-0">Secure your date and time slot with a flexible deposit.</p>
+                                <p class="small text-muted mb-0">Secure your date and time slot with a flexible deposit.
+                                </p>
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-4">
                             <div class="process-step h-100">
                                 <div class="step-number">03</div>
                                 <h6>Online Waiver</h6>
-                                <p class="small text-muted mb-0">Your whole group signs the digital waiver in advance.</p>
+                                <p class="small text-muted mb-0">Your whole group signs the digital waiver in advance.
+                                </p>
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-4">
                             <div class="process-step h-100">
                                 <div class="step-number">04</div>
                                 <h6>Event Day</h6>
-                                <p class="small text-muted mb-0">Arrival, safety briefing, and technique instruction.</p>
+                                <p class="small text-muted mb-0">Arrival, safety briefing, and technique instruction.
+                                </p>
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-4">
@@ -201,15 +248,17 @@
                         <div class="row align-items-center">
                             <div class="col-md-8">
                                 <h4 class="text-white mb-2">Save time on event day</h4>
-                                <p class="small text-muted mb-md-0">All participants must sign a waiver before throwing. Do it now and skip the paperwork on arrival.</p>
+                                <p class="small text-muted mb-md-0">All participants must sign a waiver before throwing.
+                                    Do it now and skip the paperwork on arrival.</p>
                             </div>
                             <div class="col-md-4 text-md-end">
-                                <a href="#" class="btn btn-primary">Sign Waiver Now →</a>
+                                <a href="#" class="btn btn-primary">Sign Waiver Now ?</a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="floor-plan-placeholder p-5 bg-dark border border-secondary text-center mb-5" data-aos="fade-up">
+                    <div class="floor-plan-placeholder p-5 bg-dark border border-secondary text-center mb-5"
+                        data-aos="fade-up">
                         <i data-lucide="map" class="text-highlight mb-3" style="width: 48px; height: 48px;"></i>
                         <h4 class="text-white">Venue Floor Plan</h4>
                         <p class="small text-muted">Showing lanes, lounge, bar, and private event space.</p>
@@ -227,7 +276,8 @@
                             <form>
                                 <div class="mb-3">
                                     <label class="form-label small">Group Size</label>
-                                    <input type="number" class="form-control bg-dark border-secondary text-white" placeholder="e.g. 25">
+                                    <input type="number" class="form-control bg-dark border-secondary text-white"
+                                        placeholder="e.g. 25">
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label small">Preferred Date</label>
@@ -275,10 +325,68 @@
 
     <!-- Footer -->
     <footer>
-        <div class="container text-center">
-            <p class="small mb-0">&copy; 2026 Ironwood Hatchet Lounge. All Rights Reserved.</p>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <a class="navbar-brand d-flex align-items-center mb-4" href="index.html">
+                        <i data-lucide="axe" class="me-2 text-highlight"></i>
+                        <span class="h3 mb-0 display-font">Milk &amp;<span class="text-highlight"> Melt</span></span>
+                    </a>
+                    <p class="small opacity-75 mb-4">Austin's premier axe throwing and hatchet lounge. Providing a safe,
+                        high-energy environment for recreational and competitive throwers alike.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="social-icon-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5>Quick Links</h5>
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="about.html" class="footer-link">About Us</a>
+                    <a href="services.html" class="footer-link">Packages</a>
+                    <a href="pricing.html" class="footer-link">Pricing</a>
+                    <a href="blog.html" class="footer-link">Blog</a>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5>Resources</h5>
+                    <a href="contact.html" class="footer-link">Online Waiver</a>
+                    <a href="#" class="footer-link">Safety Rules</a>
+                    <a href="#" class="footer-link">League Rules</a>
+                    <a href="contact.html" class="footer-link">Gift Cards</a>
+                    <a href="documentation/index.html" class="footer-link">Documentation</a>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Newsletter</h5>
+                    <p class="small opacity-75 mb-3">Get early access to tournament registrations &amp; venue
+                        promotions.</p>
+                    <form class="d-flex flex-column flex-sm-row gap-2">
+                        <input type="email" class="form-control bg-dark border-secondary text-white w-100"
+                            placeholder="Email Address">
+                        <button class="btn btn-primary w-100 footer-btn" type="submit">Join</button>
+                    </form>
+                    <div class="mt-4 small">
+                        <p class="mb-1"><i data-lucide="map-pin" class="text-highlight me-2" style="width: 14px;"></i>
+                            123 Woodcutters Way, Austin, TX 78701</p>
+                        <p class="mb-0"><i data-lucide="phone" class="text-highlight me-2" style="width: 14px;"></i>
+                            (512) 555-0199</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-5 border-secondary border-opacity-25">
+            <div class="text-center">
+                <p class="small mb-0">&copy; 2026 AxeHaus. All Rights Reserved.</p>
+            </div>
         </div>
     </footer>
+
+
+    <!-- Scroll Top Button -->
+    <button id="scroll-top" class="btn btn-primary rounded-circle position-fixed bottom-0 end-0 m-4 d-none"
+        style="z-index: 1000; width: 50px; height: 50px; padding: 0;">
+        <i data-lucide="arrow-up"></i>
+    </button>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -288,4 +396,5 @@
         lucide.createIcons();
     </script>
 </body>
+
 </html>

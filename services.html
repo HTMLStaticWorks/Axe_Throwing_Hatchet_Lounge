@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en" data-bs-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services & Packages | Ironwood Hatchet Lounge</title>
-    
+    <title>Services & Packages | AxeHaus</title>
+
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- AOS Animation CSS -->
@@ -13,217 +14,211 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark-mode.css">
     <link rel="stylesheet" href="assets/css/rtl.css">
-    
+
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-hero {
+            background: var(--highlight-color);
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: -60px;
+            right: -60px;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 50%;
+        }
+
+        .page-hero::after {
+            content: '';
+            position: absolute;
+            bottom: -80px;
+            left: -40px;
+            width: 240px;
+            height: 240px;
+            background: rgba(0, 0, 0, 0.08);
+            border-radius: 50%;
+        }
+
+        .page-hero-strip {
+            background: #C2410C;
+            padding: 32px 0;
+        }
+
+        .page-hero-strip .s-num {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.2rem;
+            color: #fff;
+            line-height: 1;
+        }
+
+        .page-hero-strip .s-lbl {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        .service-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .service-card:hover {
+            border-color: var(--highlight-color);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-card img {
+            height: 220px;
+            object-fit: cover;
+            width: 100%;
+        }
+    </style>
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-axe'><path d='m14 12-8.5 8.5a2.12 2.12 0 1 1-3-3L11 9'/><path d='M15 13 9 7l4-4 6 6h3a8 8 0 0 1-7 7z'/></svg>">
 </head>
+
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top scrolled">
+    <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
                 <i data-lucide="axe" class="me-2 text-highlight"></i>
-                <span class="h3 mb-0 text-white display-font">IRONWOOD <span class="text-highlight">HATCHET</span></span>
+                <span class="h3 mb-0 display-font">AxeHaus</span>
             </a>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <i data-lucide="menu" class="text-white"></i>
+                <i data-lucide="menu"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Home</a>
+                        <ul class="dropdown-menu  border-secondary">
+                            <li><a class="dropdown-item " href="index.html">Home 1</a></li>
+                            <li><a class="dropdown-item" href="home2.html">Home 2</a></li>
+                        </ul>
+                    </li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link text-highlight" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
                     <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
+                <div class="d-flex align-items-center ms-lg-4 mt-3 mt-lg-0">
+                    <button id="theme-toggle" class="btn btn-link p-0 me-3">
+                        <i data-lucide="sun"></i>
+                    </button>
+                    <button id="rtl-toggle" class="btn btn-link p-0 me-3">
+                        <i data-lucide="arrow-left-right"></i>
+                    </button>
+                    <a href="register.html" class="btn btn-primary">Signup</a>
+                </div>
             </div>
         </div>
     </nav>
 
-    <!-- Header -->
-    <header class="section-padding bg-dark wood-grain text-center mt-5">
-        <div class="hero-overlay opacity-75"></div>
-        <div class="container position-relative z-3">
-            <h1 class="display-2 text-white mb-3" data-aos="fade-up">Services & <span class="text-highlight">Packages</span></h1>
-            <p class="lead text-light opacity-75 mx-auto" style="max-width: 600px;" data-aos="fade-up" data-aos-delay="100">Everything we offer, from casual sessions to competitive leagues.</p>
+    <!-- Section 1: Hero -->
+    <section class="page-hero">
+        <div class="container position-relative" style="z-index:1;">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <span class="badge bg-white text-highlight px-3 py-2 mb-3"
+                        style="letter-spacing:1px;font-size:0.75rem;" data-aos="fade-down">READY TO THROW?</span>
+                    <h1 class="display-2 text-white mb-3" data-aos="fade-up">Our Packages</h1>
+                    <p class="lead text-white mb-0 mx-auto" style="max-width:600px;opacity:0.9;" data-aos="fade-up"
+                        data-aos-delay="100">From solo practice to corporate blowouts, we have the perfect lane for you.
+                    </p>
+                </div>
+            </div>
         </div>
-    </header>
+    </section>
 
-    <!-- Filter Bar -->
+    <!-- Section 2: Stats Strip -->
+    <section class="page-hero-strip">
+        <div class="container">
+            <div class="row g-3 text-center">
+                <div class="col-6 col-md-3">
+                    <div class="s-num">12</div>
+                    <div class="s-lbl">Premium Lanes</div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="s-num">60/90</div>
+                    <div class="s-lbl">Min Sessions</div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="s-num">50+</div>
+                    <div class="s-lbl">Craft Beers</div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="s-num">100%</div>
+                    <div class="s-lbl">Pro Coaching</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Filter Bar -->
     <section class="py-4 bg-black border-bottom border-secondary border-opacity-25">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-auto mb-3 mb-md-0">
-                    <span class="text-uppercase small text-accent letter-spacing-1 fw-bold">Filter By:</span>
-                </div>
-                <div class="col-md">
-                    <div class="d-flex flex-wrap gap-2">
-                        <button class="btn btn-sm btn-outline-secondary px-3 py-1 rounded-0 active occasion-btn" data-filter="all">All Services</button>
-                        <button class="btn btn-sm btn-outline-secondary px-3 py-1 rounded-0 occasion-btn" data-filter="lane">Lane Sessions</button>
-                        <button class="btn btn-sm btn-outline-secondary px-3 py-1 rounded-0 occasion-btn" data-filter="league">League Play</button>
-                        <button class="btn btn-sm btn-outline-secondary px-3 py-1 rounded-0 occasion-btn" data-filter="event">Group Events</button>
-                        <button class="btn btn-sm btn-outline-secondary px-3 py-1 rounded-0 occasion-btn" data-filter="member">Memberships</button>
-                    </div>
-                </div>
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+                <button class="btn btn-outline-secondary btn-sm px-4 active"
+                    style="background:var(--highlight-color); border-color:var(--highlight-color); color:#fff;">All
+                    Packages</button>
+                <button class="btn btn-outline-secondary btn-sm px-4">Recreational</button>
+                <button class="btn btn-outline-secondary btn-sm px-4">Corporate</button>
+                <button class="btn btn-outline-secondary btn-sm px-4">Competitive</button>
             </div>
         </div>
     </section>
 
-    <!-- Services Grid -->
+    <!-- Section 4: Grid -->
     <section class="section-padding">
         <div class="container">
-            <div class="row g-4" id="services-container">
-                <!-- 1. Open Lane -->
-                <div class="col-md-6 col-lg-4 occasion-card" data-category="lane" data-aos="fade-up">
-                    <div class="service-card h-100 shadow-sm">
-                        <div class="p-4">
-                            <div class="d-flex justify-content-between align-items-start mb-3">
-                                <i data-lucide="crosshair" class="text-highlight" style="width: 32px; height: 32px;"></i>
-                                <span class="badge bg-highlight">From $28</span>
-                            </div>
-                            <h4>Open Lane Session</h4>
-                            <p class="small text-muted mb-4">Walk-in or reserved. Perfect for solo practice or a small group of friends. Professional coach included for safety and tips.</p>
-                            <ul class="list-unstyled mb-4 small">
-                                <li class="mb-2"><i data-lucide="check" class="text-highlight me-2" style="width: 14px;"></i> 1hr or 2hr Blocks</li>
-                                <li class="mb-2"><i data-lucide="check" class="text-highlight me-2" style="width: 14px;"></i> All Equipment Provided</li>
-                                <li class="mb-2"><i data-lucide="check" class="text-highlight me-2" style="width: 14px;"></i> Safety Briefing Included</li>
-                            </ul>
-                            <a href="contact.html" class="btn btn-primary w-100">Book Now</a>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="service-card">
+                        <img src="assets/images/service1.png" alt="Casual">
+                        <div class="p-4 d-flex flex-column flex-grow-1">
+                            <h4>Casual Throw</h4>
+                            <p class="text-muted small">Perfect for date nights or small groups.</p>
+                            <a href="pricing.html" class="btn btn-primary mt-auto shadow">Book Now</a>
                         </div>
                     </div>
                 </div>
-                <!-- 2. Date Night -->
-                <div class="col-md-6 col-lg-4 occasion-card" data-category="lane" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-card h-100 shadow-sm">
-                        <div class="p-4">
-                            <div class="d-flex justify-content-between align-items-start mb-3">
-                                <i data-lucide="heart" class="text-highlight" style="width: 32px; height: 32px;"></i>
-                                <span class="badge bg-highlight">From $59/Couple</span>
-                            </div>
-                            <h4>Date Night Package</h4>
-                            <p class="small text-muted mb-4">Impress your date with something different. Includes lane time, drinks, and a guaranteed "Instagram moment."</p>
-                            <ul class="list-unstyled mb-4 small">
-                                <li class="mb-2"><i data-lucide="check" class="text-highlight me-2" style="width: 14px;"></i> 2 People / 1hr Lane</li>
-                                <li class="mb-2"><i data-lucide="check" class="text-highlight me-2" style="width: 14px;"></i> 2 Welcome Drinks</li>
-                                <li class="mb-2"><i data-lucide="check" class="text-highlight me-2" style="width: 14px;"></i> Private Coach Support</li>
-                            </ul>
-                            <a href="contact.html" class="btn btn-primary w-100">Book Package</a>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card">
+                        <img src="assets/images/service2.png" alt="Group">
+                        <div class="p-4 d-flex flex-column flex-grow-1">
+                            <h4>Team Building</h4>
+                            <p class="text-muted small">Elevate your company outings.</p>
+                            <a href="contact.html" class="btn btn-primary mt-auto shadow">Inquire</a>
                         </div>
                     </div>
                 </div>
-                <!-- 3. Birthday -->
-                <div class="col-md-6 col-lg-4 occasion-card" data-category="event" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-card h-100 shadow-sm">
-                        <div class="p-4">
-                            <div class="d-flex justify-content-between align-items-start mb-3">
-                                <i data-lucide="cake" class="text-highlight" style="width: 32px; height: 32px;"></i>
-                                <span class="badge bg-highlight">From $199</span>
-                            </div>
-                            <h4>Birthday Party Package</h4>
-                            <p class="small text-muted mb-4">Celebrate another year with a smash. Includes private lanes, custom scoring, and a dedicated host.</p>
-                            <ul class="list-unstyled mb-4 small">
-                                <li class="mb-2"><i data-lucide="check" class="text-highlight me-2" style="width: 14px;"></i> Private Lane(s)</li>
-                                <li class="mb-2"><i data-lucide="check" class="text-highlight me-2" style="width: 14px;"></i> Custom Digital Scoring</li>
-                                <li class="mb-2"><i data-lucide="check" class="text-highlight me-2" style="width: 14px;"></i> Party Host Included</li>
-                            </ul>
-                            <a href="service-details.html" class="btn btn-outline-silver w-100">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- 4. Bachelor -->
-                <div class="col-md-6 col-lg-4 occasion-card" data-category="event" data-aos="fade-up">
-                    <div class="service-card h-100 shadow-sm">
-                        <div class="p-4">
-                            <div class="d-flex justify-content-between align-items-start mb-3">
-                                <i data-lucide="users" class="text-highlight" style="width: 32px; height: 32px;"></i>
-                                <span class="badge bg-highlight">From $299</span>
-                            </div>
-                            <h4>The Send-Off Package</h4>
-                            <p class="small text-muted mb-4">Bachelor or bachelorette, we've got the ultimate group activity. Themed games and optional bar tabs.</p>
-                            <ul class="list-unstyled mb-4 small">
-                                <li class="mb-2"><i data-lucide="check" class="text-highlight me-2" style="width: 14px;"></i> Private Lanes</li>
-                                <li class="mb-2"><i data-lucide="check" class="text-highlight me-2" style="width: 14px;"></i> Themed Scoring Games</li>
-                                <li class="mb-2"><i data-lucide="check" class="text-highlight me-2" style="width: 14px;"></i> Optional Bar Tab</li>
-                            </ul>
-                            <a href="service-details.html" class="btn btn-outline-silver w-100">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- 5. Corporate -->
-                <div class="col-md-6 col-lg-4 occasion-card" data-category="event" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-card h-100 shadow-sm">
-                        <div class="p-4">
-                            <div class="d-flex justify-content-between align-items-start mb-3">
-                                <i data-lucide="briefcase" class="text-highlight" style="width: 32px; height: 32px;"></i>
-                                <span class="badge bg-highlight">From $549</span>
-                            </div>
-                            <h4>Corporate Team Building</h4>
-                            <p class="small text-muted mb-4">More memorable than bowling. Private event space, branded scoring, and live leaderboards.</p>
-                            <ul class="list-unstyled mb-4 small">
-                                <li class="mb-2"><i data-lucide="check" class="text-highlight me-2" style="width: 14px;"></i> Private Event Space</li>
-                                <li class="mb-2"><i data-lucide="check" class="text-highlight me-2" style="width: 14px;"></i> Live Leaderboard Display</li>
-                                <li class="mb-2"><i data-lucide="check" class="text-highlight me-2" style="width: 14px;"></i> Catering Options</li>
-                            </ul>
-                            <a href="service-details.html" class="btn btn-outline-silver w-100">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- 6. League -->
-                <div class="col-md-6 col-lg-4 occasion-card" data-category="league" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-card h-100 shadow-sm">
-                        <div class="p-4">
-                            <div class="d-flex justify-content-between align-items-start mb-3">
-                                <i data-lucide="trophy" class="text-highlight" style="width: 32px; height: 32px;"></i>
-                                <span class="badge bg-highlight">From $149/Season</span>
-                            </div>
-                            <h4>Axe Throwing League</h4>
-                            <p class="small text-muted mb-4">Weekly sessions, season standings, and a playoff tournament. WATL-sanctioned play.</p>
-                            <ul class="list-unstyled mb-4 small">
-                                <li class="mb-2"><i data-lucide="check" class="text-highlight me-2" style="width: 14px;"></i> 8-Week Regular Season</li>
-                                <li class="mb-2"><i data-lucide="check" class="text-highlight me-2" style="width: 14px;"></i> Playoff Tournament Entry</li>
-                                <li class="mb-2"><i data-lucide="check" class="text-highlight me-2" style="width: 14px;"></i> League Discounts</li>
-                            </ul>
-                            <a href="contact.html" class="btn btn-primary w-100">Join Next Season</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- 7. Tournament -->
-                <div class="col-md-6 col-lg-4 occasion-card" data-category="league" data-aos="fade-up">
-                    <div class="service-card h-100 shadow-sm">
-                        <div class="p-4">
-                            <div class="d-flex justify-content-between align-items-start mb-3">
-                                <i data-lucide="medal" class="text-highlight" style="width: 32px; height: 32px;"></i>
-                                <span class="badge bg-highlight">From $35/Entry</span>
-                            </div>
-                            <h4>Tournament Entry</h4>
-                            <p class="small text-muted mb-4">Registered competition for all skill levels. Prizes, trophies, and WATL ranking points.</p>
-                            <ul class="list-unstyled mb-4 small">
-                                <li class="mb-2"><i data-lucide="check" class="text-highlight me-2" style="width: 14px;"></i> WATL Format Scoring</li>
-                                <li class="mb-2"><i data-lucide="check" class="text-highlight me-2" style="width: 14px;"></i> Cash Prize Pools</li>
-                                <li class="mb-2"><i data-lucide="check" class="text-highlight me-2" style="width: 14px;"></i> Commemorative Shirt</li>
-                            </ul>
-                            <a href="contact.html" class="btn btn-primary w-100">Register</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- 8. Membership -->
-                <div class="col-md-6 col-lg-4 occasion-card" data-category="member" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-card h-100 shadow-sm">
-                        <div class="p-4">
-                            <div class="d-flex justify-content-between align-items-start mb-3">
-                                <i data-lucide="crown" class="text-highlight" style="width: 32px; height: 32px;"></i>
-                                <span class="badge bg-highlight">$89/Month</span>
-                            </div>
-                            <h4>Venue Membership</h4>
-                            <p class="small text-muted mb-4">Our monthly pass for the obsessed. Unlimited open sessions and priority booking.</p>
-                            <ul class="list-unstyled mb-4 small">
-                                <li class="mb-2"><i data-lucide="check" class="text-highlight me-2" style="width: 14px;"></i> Unlimited Open Sessions</li>
-                                <li class="mb-2"><i data-lucide="check" class="text-highlight me-2" style="width: 14px;"></i> 20% Off Guest Passes</li>
-                                <li class="mb-2"><i data-lucide="check" class="text-highlight me-2" style="width: 14px;"></i> Priority Lane Booking</li>
-                            </ul>
-                            <a href="contact.html" class="btn btn-primary w-100">Become a Member</a>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card">
+                        <img src="assets/images/service3.png" alt="League">
+                        <div class="p-4 d-flex flex-column flex-grow-1">
+                            <h4>League Play</h4>
+                            <p class="text-muted small">Join the competitive community.</p>
+                            <a href="contact.html" class="btn btn-primary mt-auto shadow">Join Now</a>
                         </div>
                     </div>
                 </div>
@@ -231,61 +226,32 @@
         </div>
     </section>
 
-    <!-- Comparison Table -->
+    <!-- Section 5: Comparison -->
     <section class="section-padding bg-body-tertiary">
         <div class="container">
-            <div class="row mb-5 text-center" data-aos="fade-up">
-                <div class="col-lg-8 mx-auto">
-                    <h2 class="display-4">Compare <span class="text-highlight">Offerings</span></h2>
-                    <p class="text-muted">Find the right fit for your group.</p>
-                </div>
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-4">Compare <span class="text-highlight">Plans</span></h2>
+                <p class="text-muted">Find the right level for your group.</p>
             </div>
-            <div class="table-responsive" data-aos="fade-up">
-                <table class="table table-dark border-secondary">
-                    <thead class="bg-dark">
+            <div class="table-responsive service-comparison-table rounded shadow-sm bg-white">
+                <table class="table table-borderless mb-0">
+                    <thead class="bg-dark text-white">
                         <tr>
-                            <th class="p-4">Feature</th>
-                            <th class="p-4 text-center">Open Session</th>
-                            <th class="p-4 text-center">Private Event</th>
-                            <th class="p-4 text-center">Membership</th>
+                            <th class="p-3">Feature</th>
+                            <th class="p-3 text-center">Casual</th>
+                            <th class="p-3 text-center">Pro</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr class="border-bottom">
                             <td class="p-3">Coach Included</td>
                             <td class="p-3 text-center text-success"><i data-lucide="check"></i></td>
                             <td class="p-3 text-center text-success"><i data-lucide="check"></i></td>
+                        </tr>
+                        <tr class="border-bottom">
+                            <td class="p-3">Private Lane</td>
+                            <td class="p-3 text-center text-muted"><i data-lucide="x"></i></td>
                             <td class="p-3 text-center text-success"><i data-lucide="check"></i></td>
-                        </tr>
-                        <tr>
-                            <td class="p-3">Private Lane Guarantee</td>
-                            <td class="p-3 text-center text-muted">No</td>
-                            <td class="p-3 text-center text-success"><i data-lucide="check"></i></td>
-                            <td class="p-3 text-center text-muted">No</td>
-                        </tr>
-                        <tr>
-                            <td class="p-3">Catering Options</td>
-                            <td class="p-3 text-center text-muted">No</td>
-                            <td class="p-3 text-center text-success"><i data-lucide="check"></i></td>
-                            <td class="p-3 text-center text-muted">No</td>
-                        </tr>
-                        <tr>
-                            <td class="p-3">Unlimited Sessions</td>
-                            <td class="p-3 text-center text-muted">No</td>
-                            <td class="p-3 text-center text-muted">No</td>
-                            <td class="p-3 text-center text-success"><i data-lucide="check"></i></td>
-                        </tr>
-                        <tr>
-                            <td class="p-3">Booking Lead Time</td>
-                            <td class="p-3 text-center">None / 1 Day</td>
-                            <td class="p-3 text-center">7+ Days</td>
-                            <td class="p-3 text-center">None</td>
-                        </tr>
-                        <tr>
-                            <td class="p-3">Pricing</td>
-                            <td class="p-3 text-center">From $28</td>
-                            <td class="p-3 text-center">From $199</td>
-                            <td class="p-3 text-center">$89/mo</td>
                         </tr>
                     </tbody>
                 </table>
@@ -293,51 +259,68 @@
         </div>
     </section>
 
-    <!-- Add-Ons -->
-    <section class="section-padding bg-dark wood-grain position-relative">
-        <div class="hero-overlay opacity-90"></div>
-        <div class="container position-relative z-3">
-            <div class="row mb-5 text-center" data-aos="fade-up">
-                <div class="col-lg-8 mx-auto">
-                    <h2 class="display-4 text-white">Event <span class="text-highlight">Add-Ons</span></h2>
-                    <p class="text-light opacity-75">Enhance your experience with these extras.</p>
+    <!-- Section 6: Safety Protocol -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h2 class="display-4 mb-4">Safety <span class="text-highlight">First</span></h2>
+                    <p class="mb-4 text-muted">Your safety is our top priority. We've designed our venue with
+                        state-of-the-art safety features and strict protocols to ensure a worry-free experience.</p>
+                    <ul class="list-unstyled">
+                        <li class="mb-3 d-flex align-items-center gap-3"><i data-lucide="shield-check"
+                                class="text-highlight"></i> <span>Anti-bounce border technology in every lane.</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-center gap-3"><i data-lucide="shield-check"
+                                class="text-highlight"></i> <span>Mandatory safety briefings for all
+                                first-timers.</span></li>
+                        <li class="mb-3 d-flex align-items-center gap-3"><i data-lucide="shield-check"
+                                class="text-highlight"></i> <span>Certified axe coaches monitoring every session.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="bg-body-tertiary p-5 rounded shadow-sm border">
+                        <i data-lucide="info" class="text-highlight mb-4" style="width:48px; height:48px;"></i>
+                        <h4>Pro Tip</h4>
+                        <p class="text-muted mb-0">Closed-toe shoes are strictly required for all throwers. We recommend
+                            comfortable, athletic footwear for the best experience.</p>
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Section 7: How It Works -->
+    <section class="section-padding bg-dark how-it-works-highlight text-white">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-4">How It <span class="text-highlight">Works</span></h2>
+                <p class="opacity-75">Your journey from rookie to pro in three simple steps.</p>
+            </div>
             <div class="row g-4 text-center">
-                <div class="col-6 col-md-4 col-lg-2" data-aos="zoom-in">
-                    <div class="p-3">
-                        <i data-lucide="utensils" class="text-highlight mb-3" style="width: 32px; height: 32px;"></i>
-                        <h6 class="text-white">Catering</h6>
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="p-4">
+                        <div class="display-1 text-highlight  mb-4 fw-bold">01</div>
+                        <h4>Check In</h4>
+                        <p class="small opacity-75">Sign your waiver online or at the door and get matched with your
+                            personal axe coach.</p>
                     </div>
                 </div>
-                <div class="col-6 col-md-4 col-lg-2" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="p-3">
-                        <i data-lucide="beer" class="text-highlight mb-3" style="width: 32px; height: 32px;"></i>
-                        <h6 class="text-white">Full Bar</h6>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-4">
+                        <div class="display-1 text-highlight  mb-4 fw-bold">02</div>
+                        <h4>Safety Training</h4>
+                        <p class="small opacity-75">Spend 10-15 minutes learning the proper grip, stance, and rotation
+                            techniques.</p>
                     </div>
                 </div>
-                <div class="col-6 col-md-4 col-lg-2" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="p-3">
-                        <i data-lucide="shirt" class="text-highlight mb-3" style="width: 32px; height: 32px;"></i>
-                        <h6 class="text-white">Custom Jerseys</h6>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-2" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="p-3">
-                        <i data-lucide="award" class="text-highlight mb-3" style="width: 32px; height: 32px;"></i>
-                        <h6 class="text-white">Engraving</h6>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-2" data-aos="zoom-in" data-aos-delay="400">
-                    <div class="p-3">
-                        <i data-lucide="camera" class="text-highlight mb-3" style="width: 32px; height: 32px;"></i>
-                        <h6 class="text-white">Photography</h6>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-2" data-aos="zoom-in" data-aos-delay="500">
-                    <div class="p-3">
-                        <i data-lucide="sparkles" class="text-highlight mb-3" style="width: 32px; height: 32px;"></i>
-                        <h6 class="text-white">Private Coach</h6>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="p-4">
+                        <div class="display-1 text-highlight  mb-4 fw-bold">03</div>
+                        <h4>Let 'Em Fly</h4>
+                        <p class="small opacity-75">Hit the lanes! Compete against your friends and try to nail that
+                            perfect bullseye.</p>
                     </div>
                 </div>
             </div>
@@ -346,18 +329,69 @@
 
     <!-- Footer -->
     <footer>
-        <div class="container text-center">
-            <p class="small mb-0">&copy; 2026 Ironwood Hatchet Lounge. All Rights Reserved.</p>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <a class="navbar-brand d-flex align-items-center mb-4" href="index.html">
+                        <i data-lucide="axe" class="me-2 text-highlight"></i>
+                        <span class="h3 mb-0 display-font">AxeHaus</span>
+                    </a>
+                    <p class="small opacity-75 mb-4">Austin's premier axe throwing and hatchet lounge. Providing a safe,
+                        high-energy environment for recreational and competitive throwers alike.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="social-icon-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5>Quick Links</h5>
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="about.html" class="footer-link">About Us</a>
+                    <a href="services.html" class="footer-link">Packages</a>
+                    <a href="pricing.html" class="footer-link">Pricing</a>
+                    <a href="blog.html" class="footer-link">Blog</a>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5>Resources</h5>
+                    <a href="contact.html" class="footer-link">Online Waiver</a>
+                    <a href="#" class="footer-link">Safety Rules</a>
+                    <a href="#" class="footer-link">League Rules</a>
+                    <a href="contact.html" class="footer-link">Gift Cards</a>
+                    <a href="documentation/index.html" class="footer-link">Documentation</a>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Newsletter</h5>
+                    <p class="small opacity-75 mb-3">Get early access to tournament registrations &amp; venue
+                        promotions.</p>
+                    <form class="d-flex flex-column flex-sm-row gap-2">
+                        <input type="email" class="form-control bg-dark border-secondary text-white w-100"
+                            placeholder="Email Address">
+                        <button class="btn btn-primary w-100 footer-btn" type="submit">Join</button>
+                    </form>
+                </div>
+            </div>
+            <hr class="my-5 border-secondary border-opacity-25">
+            <div class="text-center">
+                <p class="small mb-0">&copy; 2026 AxeHaus. All Rights Reserved.</p>
+            </div>
         </div>
     </footer>
+
+    <!-- Scroll Top Button -->
+    <button id="scroll-top" class="btn btn-primary rounded-circle position-fixed bottom-0 end-0 m-4 d-none"
+        style="z-index: 1000; width: 50px; height: 50px; padding: 0;">
+        <i data-lucide="arrow-up"></i>
+    </button>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/occasion-selector.js"></script>
     <script>
         lucide.createIcons();
     </script>
 </body>
+
 </html>

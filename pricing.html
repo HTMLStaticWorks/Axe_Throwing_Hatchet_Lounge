@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en" data-bs-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pricing | Ironwood Hatchet Lounge</title>
-    
+    <title>Pricing Plans | AxeHaus</title>
+
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- AOS Animation CSS -->
@@ -13,232 +14,363 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark-mode.css">
     <link rel="stylesheet" href="assets/css/rtl.css">
-    
+
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-hero {
+            background: var(--highlight-color);
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: -60px;
+            right: -60px;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 50%;
+        }
+
+        .page-hero::after {
+            content: '';
+            position: absolute;
+            bottom: -80px;
+            left: -40px;
+            width: 240px;
+            height: 240px;
+            background: rgba(0, 0, 0, 0.08);
+            border-radius: 50%;
+        }
+
+        .page-hero-strip {
+            background: #C2410C;
+            padding: 32px 0;
+        }
+
+        .page-hero-strip .s-num {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.2rem;
+            color: #fff;
+            line-height: 1;
+        }
+
+        .page-hero-strip .s-lbl {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        .price-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .price-card:hover {
+            border-color: var(--highlight-color);
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .price-card.featured {
+            border: 2px solid var(--highlight-color);
+            transform: scale(1.05);
+        }
+
+        .add-on-item {
+            padding: 1.25rem;
+            border-left: 3px solid var(--highlight-color);
+            background: var(--bg-body-tertiary);
+            margin-bottom: 0.75rem;
+            transition: all 0.3s ease;
+        }
+
+        .add-on-item:hover {
+            transform: translateX(5px);
+            background: var(--card-bg);
+        }
+
+        .card.bg-highlight svg {
+            color: #fff;
+        }
+    </style>
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-axe'><path d='m14 12-8.5 8.5a2.12 2.12 0 1 1-3-3L11 9'/><path d='M15 13 9 7l4-4 6 6h3a8 8 0 0 1-7 7z'/></svg>">
 </head>
+
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top scrolled">
+    <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
                 <i data-lucide="axe" class="me-2 text-highlight"></i>
-                <span class="h3 mb-0 text-white display-font">IRONWOOD <span class="text-highlight">HATCHET</span></span>
+                <span class="h3 mb-0 display-font">AxeHaus</span>
             </a>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <i data-lucide="menu" class="text-white"></i>
+                <i data-lucide="menu"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Home</a>
+                        <ul class="dropdown-menu  border-secondary">
+                            <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+                            <li><a class="dropdown-item" href="home2.html">Home 2</a></li>
+                        </ul>
+                    </li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link text-highlight" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="pricing.html">Pricing</a></li>
                     <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
+                <div class="d-flex align-items-center ms-lg-4 mt-3 mt-lg-0">
+                    <button id="theme-toggle" class="btn btn-link p-0 me-3">
+                        <i data-lucide="sun"></i>
+                    </button>
+                    <button id="rtl-toggle" class="btn btn-link p-0 me-3">
+                        <i data-lucide="arrow-left-right"></i>
+                    </button>
+                    <a href="register.html" class="btn btn-primary">Signup</a>
+                </div>
             </div>
         </div>
     </nav>
 
-    <!-- Header -->
-    <header class="section-padding bg-dark wood-grain text-center mt-5">
-        <div class="hero-overlay opacity-75"></div>
-        <div class="container position-relative z-3">
-            <h1 class="display-2 text-white mb-3" data-aos="fade-up">Transparent <span class="text-highlight">Pricing</span></h1>
-            <p class="lead text-light opacity-75 mx-auto" style="max-width: 600px;" data-aos="fade-up" data-aos-delay="100">No hidden fees. Just axes, targets, and great times.</p>
-        </div>
-    </header>
-
-    <!-- Lane Pricing -->
-    <section class="section-padding">
-        <div class="container">
-            <div class="row mb-5 text-center" data-aos="fade-up">
-                <div class="col-lg-8 mx-auto">
-                    <h2 class="display-4">Lane <span class="text-highlight">Rentals</span></h2>
-                    <p class="text-muted">Perfect for individuals and small groups.</p>
+    <!-- Section 1: Hero -->
+    <section class="page-hero">
+        <div class="container position-relative" style="z-index:1;">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <span class="badge bg-white text-highlight px-3 py-2 mb-3"
+                        style="letter-spacing:1px;font-size:0.75rem;" data-aos="fade-down">STRAIGHTFORWARD RATES</span>
+                    <h1 class="display-2 text-white mb-3" data-aos="fade-up">Pricing Plans</h1>
+                    <p class="lead text-white mb-0 mx-auto" style="max-width:600px;opacity:0.9;" data-aos="fade-up"
+                        data-aos-delay="100">Premium axe throwing shouldn't come with hidden fees. Choose your
+                        experience below.</p>
                 </div>
-            </div>
-            <div class="table-responsive" data-aos="fade-up">
-                <table class="table table-dark border-secondary">
-                    <thead class="bg-dark">
-                        <tr>
-                            <th class="p-4">Session Duration</th>
-                            <th class="p-4">Per Person</th>
-                            <th class="p-4">Equipment</th>
-                            <th class="p-4">Coach Included</th>
-                            <th class="p-4 text-center">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="p-4">1 Hour Session</td>
-                            <td class="p-4 fw-bold text-highlight">$28</td>
-                            <td class="p-4">Included</td>
-                            <td class="p-4 text-success"><i data-lucide="check"></i></td>
-                            <td class="p-4 text-center"><a href="contact.html" class="btn btn-sm btn-outline-silver">Book 1hr</a></td>
-                        </tr>
-                        <tr>
-                            <td class="p-4">2 Hour Session</td>
-                            <td class="p-4 fw-bold text-highlight">$45</td>
-                            <td class="p-4">Included</td>
-                            <td class="p-4 text-success"><i data-lucide="check"></i></td>
-                            <td class="p-4 text-center"><a href="contact.html" class="btn btn-sm btn-outline-silver">Book 2hr</a></td>
-                        </tr>
-                        <tr>
-                            <td class="p-4">Half Day (4hr)</td>
-                            <td class="p-4 fw-bold text-highlight">$80</td>
-                            <td class="p-4">Included</td>
-                            <td class="p-4 text-success"><i data-lucide="check"></i></td>
-                            <td class="p-4 text-center"><a href="contact.html" class="btn btn-sm btn-outline-silver">Book Half Day</a></td>
-                        </tr>
-                        <tr>
-                            <td class="p-4">Full Venue Buyout</td>
-                            <td class="p-4 fw-bold text-highlight">Custom Quote</td>
-                            <td class="p-4">Included</td>
-                            <td class="p-4 text-success"><i data-lucide="check"></i></td>
-                            <td class="p-4 text-center"><a href="contact.html" class="btn btn-sm btn-primary">Request Quote</a></td>
-                        </tr>
-                    </tbody>
-                </table>
             </div>
         </div>
     </section>
 
-    <!-- Package Cards -->
+    <!-- Section 2: Stats Strip -->
+    <section class="page-hero-strip">
+        <div class="container">
+            <div class="row g-3 text-center">
+                <div class="col-6 col-md-3">
+                    <div class="s-num">0</div>
+                    <div class="s-lbl">Hidden Fees</div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="s-num">100%</div>
+                    <div class="s-lbl">Price Guarantee</div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="s-num">12+</div>
+                    <div class="s-lbl">Group Packages</div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="s-num">Free</div>
+                    <div class="s-lbl">Basic Coaching</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Pricing Grid -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-12 mb-4" data-aos="fade-up">
+                    <div class="price-card p-5 h-100 d-flex flex-column text-center">
+                        <h4 class="mb-4">Casual Thrower</h4>
+                        <div class="mb-4"><span class="display-4 fw-bold">$25</span><span class="text-muted">/per</span>
+                        </div>
+                        <ul class="list-unstyled mb-5 flex-grow-1 text-center">
+                            <li class="mb-2"><i data-lucide="check" class="text-highlight me-2"></i>Shared Lane</li>
+                            <li class="mb-2"><i data-lucide="check" class="text-highlight me-2"></i>Standard Axes</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary w-100 shadow">Book Now</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="price-card featured p-5 h-100 d-flex flex-column shadow-lg text-center">
+                        <h4 class="mb-4">Pro Group</h4>
+                        <div class="mb-4"><span class="display-4 fw-bold">$45</span><span class="text-muted">/per</span>
+                        </div>
+                        <ul class="list-unstyled mb-5 flex-grow-1">
+                            <li class="mb-2"><i data-lucide="check" class="text-highlight me-2"></i>Private Lanes</li>
+                            <li class="mb-2"><i data-lucide="check" class="text-highlight me-2"></i>Pro Coaching</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary w-100 shadow">Book Group</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="price-card p-5 h-100 d-flex flex-column text-center">
+                        <h4 class="mb-4">Elite VIP</h4>
+                        <div class="mb-4"><span class="display-4 fw-bold">$75</span><span class="text-muted">/per</span>
+                        </div>
+                        <ul class="list-unstyled mb-5 flex-grow-1">
+                            <li class="mb-2"><i data-lucide="check" class="text-highlight me-2"></i>Exclusive Zone</li>
+                            <li class="mb-2"><i data-lucide="check" class="text-highlight me-2"></i>Catering Incl.</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary w-100 shadow">Inquire</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Add-Ons -->
     <section class="section-padding bg-body-tertiary">
         <div class="container">
-            <div class="row mb-5 text-center" data-aos="fade-up">
-                <div class="col-lg-8 mx-auto">
-                    <h2 class="display-4">Group <span class="text-highlight">Packages</span></h2>
-                    <p class="text-muted">Bundled value for special occasions.</p>
-                </div>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-3" data-aos="fade-up">
-                    <div class="card bg-dark border-secondary p-4 h-100 text-center">
-                        <h4 class="text-white">Date Night</h4>
-                        <p class="display-5 text-highlight mb-4">$59<span class="small text-muted" style="font-size: 1rem;">/couple</span></p>
-                        <ul class="list-unstyled mb-5 small text-muted">
-                            <li class="mb-2">1 Hour Lane</li>
-                            <li class="mb-2">2 People Max</li>
-                            <li class="mb-2">2 Welcome Drinks</li>
-                            <li class="mb-2">Private Coach</li>
-                        </ul>
-                        <a href="contact.html" class="btn btn-primary w-100">Book Date Night</a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card bg-dark border-secondary p-4 h-100 text-center">
-                        <h4 class="text-white">Birthday</h4>
-                        <p class="display-5 text-highlight mb-4">$199<span class="small text-muted" style="font-size: 1rem;">/up to 10</span></p>
-                        <ul class="list-unstyled mb-5 small text-muted">
-                            <li class="mb-2">2 Hours Lane</li>
-                            <li class="mb-2">Private Host</li>
-                            <li class="mb-2">Digital Scoring</li>
-                            <li class="mb-2">Trophy Included</li>
-                        </ul>
-                        <a href="contact.html" class="btn btn-outline-silver w-100">Book Birthday</a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card bg-dark border-secondary p-4 h-100 text-center">
-                        <h4 class="text-white">Bachelor</h4>
-                        <p class="display-5 text-highlight mb-4">$299<span class="small text-muted" style="font-size: 1rem;">/up to 15</span></p>
-                        <ul class="list-unstyled mb-5 small text-muted">
-                            <li class="mb-2">2.5 Hours Lane</li>
-                            <li class="mb-2">Themed Games</li>
-                            <li class="mb-2">Photo Props</li>
-                            <li class="mb-2">Bar Tab Minimums Apply</li>
-                        </ul>
-                        <a href="contact.html" class="btn btn-outline-silver w-100">Book Party</a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
-                    <div class="card bg-dark border-secondary p-4 h-100 text-center border-highlight">
-                        <h4 class="text-white">Corporate</h4>
-                        <p class="display-5 text-highlight mb-4">$549<span class="small text-muted" style="font-size: 1rem;">/up to 30</span></p>
-                        <ul class="list-unstyled mb-5 small text-muted">
-                            <li class="mb-2">3 Hours Lane</li>
-                            <li class="mb-2">Private Coordinator</li>
-                            <li class="mb-2">Leaderboard Display</li>
-                            <li class="mb-2">Catering Available</li>
-                        </ul>
-                        <a href="contact.html" class="btn btn-primary w-100">Request Quote</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Add-Ons List -->
-    <section class="section-padding">
-        <div class="container">
-            <div class="row">
+            <div class="row align-items-center">
                 <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
                     <h2 class="display-4 mb-4">Event <span class="text-highlight">Add-Ons</span></h2>
-                    <ul class="list-group list-group-flush bg-transparent">
-                        <li class="list-group-item bg-transparent text-white border-secondary d-flex justify-content-between p-3">
-                            <span>Catering Packages (Per Guest)</span>
-                            <span class="text-highlight fw-bold">from $15</span>
-                        </li>
-                        <li class="list-group-item bg-transparent text-white border-secondary d-flex justify-content-between p-3">
-                            <span>Professional Photography (1hr)</span>
-                            <span class="text-highlight fw-bold">+$75</span>
-                        </li>
-                        <li class="list-group-item bg-transparent text-white border-secondary d-flex justify-content-between p-3">
-                            <span>Custom Branded Jerseys (Unit)</span>
-                            <span class="text-highlight fw-bold">$45</span>
-                        </li>
-                        <li class="list-group-item bg-transparent text-white border-secondary d-flex justify-content-between p-3">
-                            <span>Trophy Engraving Service</span>
-                            <span class="text-highlight fw-bold">+$25</span>
-                        </li>
-                        <li class="list-group-item bg-transparent text-white border-secondary d-flex justify-content-between p-3">
-                            <span>Private Coaching Session (1hr)</span>
-                            <span class="text-highlight fw-bold">+$50</span>
-                        </li>
-                    </ul>
+                    <div class="add-on-item d-flex justify-content-between"><span>Extra Time (30m)</span><span
+                            class="fw-bold text-highlight">+$12</span></div>
+                    <div class="add-on-item d-flex justify-content-between"><span>Bullseye Platter</span><span
+                            class="fw-bold text-highlight">$55</span></div>
+                    <div class="add-on-item d-flex justify-content-between"><span>Photo Gallery</span><span
+                            class="fw-bold text-highlight">$80</span></div>
                 </div>
                 <div class="col-lg-5 offset-lg-1" data-aos="fade-left">
-                    <div class="card bg-highlight text-white p-5 h-100 text-center d-flex flex-column justify-content-center">
-                        <i data-lucide="crown" class="mb-4 mx-auto" style="width: 64px; height: 64px;"></i>
-                        <h2 class="display-5 mb-3">Venue Membership</h2>
-                        <p class="display-4 mb-4">$89<span class="small opacity-75" style="font-size: 1rem;">/month</span></p>
-                        <p class="small mb-5 opacity-90">Unlimited open sessions, priority booking, and 20% off all guest passes. The best way to level up your game.</p>
-                        <a href="contact.html" class="btn btn-dark btn-lg">Become a Member</a>
+                    <div class="card bg-highlight membership-highlight p-5 text-center border-0 shadow-lg">
+                        <i data-lucide="crown" class="mb-4 mx-auto" style="width:56px;"></i>
+                        <h2 class="mb-3">Membership</h2>
+                        <p class="display-5 mb-4 text-white">$99<span style="font-size:1.2rem;">/mo</span></p>
+                        <a href="contact.html" class="btn btn-light btn-lg fw-bold"
+                            style="color:var(--highlight-color);">JOIN NOW</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Payment Badges -->
-    <section class="py-5 bg-black border-top border-secondary border-opacity-10 text-center">
+    <!-- Section 5: FAQ -->
+    <section class="section-padding">
         <div class="container">
-            <p class="small text-accent text-uppercase letter-spacing-1 mb-4">Accepted Payment Methods</p>
-            <div class="d-flex flex-wrap justify-content-center gap-4 opacity-50 grayscale">
-                <span class="h4 text-white">STRIPE</span>
-                <span class="h4 text-white">PAYPAL</span>
-                <span class="h4 text-white">VENMO</span>
-                <span class="h4 text-white">CASH</span>
-                <span class="h4 text-white">SQUARE</span>
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-4">Common <span class="text-highlight">Questions</span></h2>
+                <p class="text-muted">Everything you need to know about our rates and bookings.</p>
             </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion accordion-flush" id="pricingFaq">
+                        <div class="accordion-item bg-transparent border-bottom border-secondary border-opacity-25">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button collapsed bg-transparent text-body fw-bold py-4 px-0 shadow-none"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    Are there any age restrictions for throwing?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#pricingFaq">
+                                <div class="accordion-body px-0 text-muted pb-4">
+                                    Yes, participants must be at least 12 years old. Anyone under 18 must be accompanied
+                                    by a legal guardian.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-transparent border-bottom border-secondary border-opacity-25">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button collapsed bg-transparent text-body fw-bold py-4 px-0 shadow-none"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    Do I need to bring my own axe?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#pricingFaq">
+                                <div class="accordion-body px-0 text-muted pb-4">
+                                    We provide all the necessary equipment, but league members are welcome to bring
+                                    their own WATL-certified axes.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Corporate CTA -->
+    <section class="py-5 bg-highlight corporate-highlight text-white text-center">
+        <div class="container py-4" data-aos="zoom-in">
+            <h2 class="display-3 mb-4 text-white">Planning a <span class="fw-bold">Large Event?</span></h2>
+            <p class="lead mb-5 mx-auto opacity-90 text-white" style="max-width:700px;">We offer special rates for
+                groups of 20 or more. Get exclusive use of our VIP lounge and dedicated coaches.</p>
+            <a href="contact.html" class="btn btn-light btn-lg px-5 py-3 fw-bold shadow"
+                style="color:var(--highlight-color);">REQUEST A QUOTE</a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="container text-center">
-            <div class="waiver-callout border-highlight p-4 mb-5 mx-auto" style="max-width: 600px;">
-                <h4 class="text-white mb-2">Ready to throw?</h4>
-                <p class="small text-muted mb-4">Book your lane + sign your waiver in minutes. We'll see you on the lanes.</p>
-                <a href="contact.html" class="btn btn-primary">Book Now & Sign Waiver</a>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <a class="navbar-brand d-flex align-items-center mb-4" href="index.html">
+                        <i data-lucide="axe" class="me-2 text-highlight"></i>
+                        <span class="h3 mb-0 display-font">AxeHaus</span>
+                    </a>
+                    <p class="small opacity-75 mb-4">Austin's premier axe throwing and hatchet lounge. Providing a safe,
+                        high-energy environment for recreational and competitive throwers alike.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="social-icon-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5>Quick Links</h5>
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="about.html" class="footer-link">About Us</a>
+                    <a href="services.html" class="footer-link">Packages</a>
+                    <a href="pricing.html" class="footer-link">Pricing</a>
+                    <a href="blog.html" class="footer-link">Blog</a>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5>Resources</h5>
+                    <a href="contact.html" class="footer-link">Online Waiver</a>
+                    <a href="#" class="footer-link">Safety Rules</a>
+                    <a href="#" class="footer-link">League Rules</a>
+                    <a href="contact.html" class="footer-link">Gift Cards</a>
+                    <a href="documentation/index.html" class="footer-link">Documentation</a>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Newsletter</h5>
+                    <p class="small opacity-75 mb-3">Get early access to tournament registrations &amp; venue
+                        promotions.</p>
+                    <form class="d-flex flex-column flex-sm-row gap-2">
+                        <input type="email" class="form-control bg-dark border-secondary text-white w-100"
+                            placeholder="Email Address">
+                        <button class="btn btn-primary w-100 footer-btn" type="submit">Join</button>
+                    </form>
+                </div>
             </div>
-            <p class="small mb-0">&copy; 2026 Ironwood Hatchet Lounge. All Rights Reserved.</p>
+            <hr class="my-5 border-secondary border-opacity-25">
+            <div class="text-center">
+                <p class="small mb-0">&copy; 2026 AxeHaus. All Rights Reserved.</p>
+            </div>
         </div>
     </footer>
+
+    <!-- Scroll Top Button -->
+    <button id="scroll-top" class="btn btn-primary rounded-circle position-fixed bottom-0 end-0 m-4 d-none"
+        style="z-index: 1000; width: 50px; height: 50px; padding: 0;">
+        <i data-lucide="arrow-up"></i>
+    </button>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -248,4 +380,5 @@
         lucide.createIcons();
     </script>
 </body>
+
 </html>
