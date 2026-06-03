@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 - Throw Missed | AxeHaus</title>
-    
+
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- AOS Animation CSS -->
@@ -13,7 +14,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark-mode.css">
     <link rel="stylesheet" href="assets/css/rtl.css">
-    
+
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
@@ -26,21 +27,36 @@
             padding: 2rem;
             background: var(--bg-body);
         }
+
         .axe-missing-svg {
             max-width: 400px;
             margin-bottom: 3rem;
         }
+
         @keyframes axe-fly-past {
-            0% { transform: translate(-200px, 0) rotate(0deg); opacity: 0; }
-            50% { opacity: 1; }
-            100% { transform: translate(600px, 100px) rotate(720deg); opacity: 0; }
+            0% {
+                transform: translate(-200px, 0) rotate(0deg);
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translate(600px, 100px) rotate(720deg);
+                opacity: 0;
+            }
         }
+
         .axe-animation {
             animation: axe-fly-past 3s infinite ease-in-out;
         }
     </style>
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-axe'><path d='m14 12-8.5 8.5a2.12 2.12 0 1 1-3-3L11 9'/><path d='M15 13 9 7l4-4 6 6h3a8 8 0 0 1-7 7z'/></svg>">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-axe'><path d='m14 12-8.5 8.5a2.12 2.12 0 1 1-3-3L11 9'/><path d='M15 13 9 7l4-4 6 6h3a8 8 0 0 1-7 7z'/></svg>">
 </head>
+
 <body>
 
     <div class="error-container wood-grain">
@@ -62,9 +78,12 @@
                 </svg>
             </div>
 
-            <h1 class="display-1 text-white mb-2" data-aos="fade-up">WHOA — <span class="text-highlight">THAT THROW MISSED.</span></h1>
-            <p class="h4 text-accent mb-5 text-uppercase letter-spacing-1" data-aos="fade-up" data-aos-delay="100">404 Page Not Found</p>
-            <p class="text-light opacity-75 mb-5 mx-auto" style="max-width: 500px;" data-aos="fade-up" data-aos-delay="200">
+            <h1 class="display-1 text-white mb-2" data-aos="fade-up">WHOA â€” <span class="text-highlight">THAT THROW
+                    MISSED.</span></h1>
+            <p class="h4 text-accent mb-5 text-uppercase letter-spacing-1" data-aos="fade-up" data-aos-delay="100">404
+                Page Not Found</p>
+            <p class="text-light opacity-75 mb-5 mx-auto" style="max-width: 500px;" data-aos="fade-up"
+                data-aos-delay="200">
                 Even our best throwers miss sometimes. Don't worry, we'll get you back on target in no time.
             </p>
 
@@ -75,15 +94,17 @@
             </div>
 
             <div class="input-group mx-auto" style="max-width: 400px;" data-aos="fade-up" data-aos-delay="400">
-                <input type="text" class="form-control bg-dark border-secondary text-white" placeholder="Search for something else...">
+                <input type="text" class="form-control bg-dark border-secondary text-white"
+                    placeholder="Search for something else...">
                 <button class="btn btn-primary"><i data-lucide="search" style="width: 18px;"></i></button>
             </div>
         </div>
     </div>
 
-    
+
     <!-- Scroll Top Button -->
-    <button id="scroll-top" class="btn btn-primary rounded-circle position-fixed bottom-0 end-0 m-4 d-none" style="z-index: 1000; width: 50px; height: 50px; padding: 0;">
+    <button id="scroll-top" class="btn btn-primary rounded-circle position-fixed bottom-0 end-0 m-4 d-none"
+        style="z-index: 1000; width: 50px; height: 50px; padding: 0;">
         <i data-lucide="arrow-up"></i>
     </button>
 
@@ -95,5 +116,5 @@
         lucide.createIcons();
     </script>
 </body>
-</html>
 
+</html>

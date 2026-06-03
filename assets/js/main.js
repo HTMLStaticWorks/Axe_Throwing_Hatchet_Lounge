@@ -1,14 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Navbar Scroll Effect
     const navbar = document.querySelector('.navbar');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-            navbar.style.background = ''; // Clear inline styles if any
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    });
+    if (navbar) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+                navbar.style.background = ''; // Clear inline styles if any
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    }
 
     const navbarCollapse = document.getElementById('navbarNav');
     if (navbarCollapse) {
@@ -36,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.getElementById('theme-toggle');
     const rtlToggle = document.getElementById('rtl-toggle');
     const htmlElement = document.documentElement;
-    
+
     // Check for saved theme in localStorage
     const savedTheme = localStorage.getItem('theme') || 'dark';
     htmlElement.setAttribute('data-bs-theme', savedTheme);
@@ -46,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
         themeToggle.addEventListener('click', () => {
             const currentTheme = htmlElement.getAttribute('data-bs-theme');
             const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            
+
             htmlElement.setAttribute('data-bs-theme', newTheme);
             localStorage.setItem('theme', newTheme);
             updateThemeIcon(newTheme);
@@ -57,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!themeToggle) return;
         const icon = themeToggle.querySelector('i, svg');
         if (!icon) return;
-        
+
         if (theme === 'dark') {
             icon.setAttribute('data-lucide', 'sun');
         } else {
@@ -105,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function createEmber(container) {
         const ember = document.createElement('div');
         ember.classList.add('ember');
-        
+
         const size = Math.random() * 3 + 1;
         const left = Math.random() * 100;
         const duration = Math.random() * 5 + 3;

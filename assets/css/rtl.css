@@ -35,3 +35,139 @@
     margin-left: 0;
     margin-right: auto;
 }
+
+/* Fix theme control position in RTL */
+[dir="rtl"] .theme-controls-fixed {
+    right: auto !important;
+    left: 1.5rem !important;
+}
+
+/* Fix generic margin utility classes in RTL */
+[dir="rtl"] .me-1 {
+    margin-left: 0.25rem !important;
+    margin-right: 0 !important;
+}
+[dir="rtl"] .me-2 {
+    margin-left: 0.5rem !important;
+    margin-right: 0 !important;
+}
+[dir="rtl"] .me-3 {
+    margin-left: 1rem !important;
+    margin-right: 0 !important;
+}
+[dir="rtl"] .me-4 {
+    margin-left: 1.5rem !important;
+    margin-right: 0 !important;
+}
+[dir="rtl"] .ms-1 {
+    margin-right: 0.25rem !important;
+    margin-left: 0 !important;
+}
+[dir="rtl"] .ms-2 {
+    margin-right: 0.5rem !important;
+    margin-left: 0 !important;
+}
+[dir="rtl"] .ms-3 {
+    margin-right: 1rem !important;
+    margin-left: 0 !important;
+}
+[dir="rtl"] .ms-4 {
+    margin-right: 1.5rem !important;
+    margin-left: 0 !important;
+}
+
+/* Fix form checkbox alignment in RTL */
+[dir="rtl"] .form-check {
+    padding-left: 0 !important;
+    padding-right: 1.5em !important;
+    text-align: right !important;
+}
+
+[dir="rtl"] .form-check .form-check-input {
+    float: right !important;
+    margin-left: 0 !important;
+    margin-right: -1.5em !important;
+}
+
+/* Fix password input groups in RTL (swapping border-radius and borders) */
+[dir="rtl"] .input-group > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating) {
+    border-top-right-radius: 0.375rem !important;
+    border-bottom-right-radius: 0.375rem !important;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+}
+
+[dir="rtl"] .input-group > :not(:first-child):not(.dropdown-menu):not(.form-floating-group) {
+    border-top-left-radius: 0.375rem !important;
+    border-bottom-left-radius: 0.375rem !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+[dir="rtl"] .input-group-auth .form-control {
+    border-right: 1px solid var(--border-color) !important;
+    border-left: none !important;
+}
+
+[dir="rtl"] [data-bs-theme="light"] .input-group-auth .form-control {
+    border-right: 1px solid #dee2e6 !important;
+    border-left: none !important;
+}
+
+[dir="rtl"] .input-group-auth .btn {
+    border-left: 1px solid var(--border-color) !important;
+    border-right: none !important;
+}
+
+[dir="rtl"] [data-bs-theme="light"] .input-group-auth .btn {
+    border-left: 1px solid #dee2e6 !important;
+    border-right: none !important;
+}
+
+/* Ensure text is aligned correctly on auth cards in RTL */
+[dir="rtl"] .auth-card form {
+    text-align: right !important;
+}
+
+/* Navbar RTL alignment and spacing fixes */
+[dir="rtl"] .navbar .ms-lg-4 {
+    margin-right: 1.5rem !important;
+    margin-left: 0 !important;
+}
+
+[dir="rtl"] .navbar #rtl-toggle {
+    margin-left: 1.25rem !important;
+    margin-right: 0 !important;
+}
+
+[dir="rtl"] .navbar #theme-toggle {
+    margin-left: 1.25rem !important;
+    margin-right: 0 !important;
+}
+
+/* Fix dropdown toggle caret spacing in RTL mode */
+[dir="rtl"] .dropdown-toggle::after {
+    margin-left: 0 !important;
+    margin-right: 0.255em !important;
+}
+
+/* Fix padding utilities in RTL */
+[dir="rtl"] .ps-1 { padding-right: 0.25rem !important; padding-left: 0 !important; }
+[dir="rtl"] .ps-2 { padding-right: 0.5rem !important; padding-left: 0 !important; }
+[dir="rtl"] .ps-3 { padding-right: 1rem !important; padding-left: 0 !important; }
+[dir="rtl"] .ps-4 { padding-right: 1.5rem !important; padding-left: 0 !important; }
+[dir="rtl"] .ps-5 { padding-right: 3rem !important; padding-left: 0 !important; }
+[dir="rtl"] .ps-lg-5 { padding-right: 3rem !important; padding-left: 0 !important; }
+
+[dir="rtl"] .pe-1 { padding-left: 0.25rem !important; padding-right: 0 !important; }
+[dir="rtl"] .pe-2 { padding-left: 0.5rem !important; padding-right: 0 !important; }
+[dir="rtl"] .pe-3 { padding-left: 1rem !important; padding-right: 0 !important; }
+[dir="rtl"] .pe-4 { padding-left: 1.5rem !important; padding-right: 0 !important; }
+[dir="rtl"] .pe-5 { padding-left: 3rem !important; padding-right: 0 !important; }
+[dir="rtl"] .pe-lg-5 { padding-left: 3rem !important; padding-right: 0 !important; }
+
+/* Reset list padding in RTL */
+[dir="rtl"] .list-unstyled {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}

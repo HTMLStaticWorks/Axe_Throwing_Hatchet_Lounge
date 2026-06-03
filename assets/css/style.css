@@ -44,7 +44,7 @@ body {
     background-color: var(--bg-body);
     color: var(--text-body);
     line-height: 1.6;
-    overflow-x: hidden;
+    overflow-x: clip;
     transition: var(--transition-smooth);
 }
 
@@ -204,6 +204,12 @@ h6,
     transition: var(--transition-smooth);
     background: var(--primary-color);
     border-bottom: 1px solid var(--border-color);
+}
+
+.navbar.sticky-top {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1030 !important;
 }
 
 [data-bs-theme="light"] .navbar {
@@ -689,7 +695,14 @@ footer .form-control {
 
 
 
-/* Fix 7: Featured Venue Highlight — "The VIP Lounge" title black in light mode */
+/* Fix 7: Featured Venue Highlight — Base styling for card container (visible in dark mode) */
+.venue-highlight-content {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
 [data-bs-theme="light"] .venue-highlight-content {
     background-color: #FFFFFF !important;
     padding: 2rem;
@@ -870,4 +883,18 @@ body.navbar-expanded {
         max-width: 100% !important;
         margin-bottom: 2rem;
     }
+}
+
+/* FAQ Accordion typography overrides to fix Bebas Neue header inheritance */
+.accordion-header {
+    font-family: 'Inter', sans-serif !important;
+    text-transform: none !important;
+    letter-spacing: normal !important;
+}
+
+.accordion-button {
+    font-family: 'Inter', sans-serif !important;
+    text-transform: none !important;
+    letter-spacing: normal !important;
+    font-size: 1.1rem !important;
 }
