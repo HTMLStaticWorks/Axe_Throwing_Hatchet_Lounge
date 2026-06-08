@@ -898,3 +898,10 @@ body.navbar-expanded {
     letter-spacing: normal !important;
     font-size: 1.1rem !important;
 }
+
+/* Placeholder color fix for bg-dark inputs in light mode */
+.form-control.bg-dark::placeholder,
+.bg-dark .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.6) !important;
+    opacity: 1 !important;
+}
